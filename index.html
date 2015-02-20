@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classeur</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbXcjzEax2LfQAlK8DdMzhA.eot);
+        src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbXcjzEax2LfQAlK8DdMzhA.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwR_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni2fQcKutQXcIrRfyR5jdjY8.eot);
+        src: local('RobotoDraft'), local('RobotoDraft-Regular'), url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni2fQcKutQXcIrRfyR5jdjY8.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbFt29aCHKT7otDW9l62Aag.eot);
+        src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbFt29aCHKT7otDW9l62Aag.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: italic;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt51NjWrQGkHHRlfZ8BWrO3Hg.eot);
+        src: local('RobotoDraft Light Italic'), local('RobotoDraft-LightItalic'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt51NjWrQGkHHRlfZ8BWrO3Hg.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt5zri8ykLuesnP4qBvpSenQU.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: italic;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTfqSxSvC1lIsK_unZDHWqTBg.eot);
+        src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTfqSxSvC1lIsK_unZDHWqTBg.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTftkZXW4sYc4BjuAIFc1SXII.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'RobotoDraft';
+        font-style: italic;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt59mkQI_kos-lIOeNt19QAas.eot);
+        src: local('RobotoDraft Bold Italic'), local('RobotoDraft-BoldItalic'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt59mkQI_kos-lIOeNt19QAas.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt5wRV2F9RPTaqyJ4QibDfkzM.woff) format('woff');
+    }
+    @font-face {
+        font-family: "Material-Design-Icons";
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.eot?-g7cqhn");
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.eot?#iefix-g7cqhn") format("embedded-opentype"), url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.woff?-g7cqhn") format("woff"), url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.ttf?-g7cqhn") format("truetype"), url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.svg?-g7cqhn#Material-Design-Icons") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    [class^="mdi-"],
+    [class*=" mdi-"] {
+        font-family: "Material-Design-Icons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .mdi-navigation-arrow-forward:before {
+        content: "\e897";
+    }
+    body {
+        margin: 0;
+        font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+    }
+    .background,
+    .backdrop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .background {
+        position: fixed;
+        background: url(images/landing-bg.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .backdrop {
+        background-color: rgba(237, 234, 230, 0.8);
+    }
+    .logo {
+        position: absolute;
+        top: 5px;
+        left: 25px;
+    }
+    .social {
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    }
+    .social a {
+    	font-size: 1.8em;
+        color: rgba(0, 0, 0, 0.7);
+        text-decoration: none;
+        padding-left: 15px;
+    }
+    .title-wrapper-1 {
+        position: relative;
+        width: 640px;
+        height: 100%;
+        left: 50%;
+        margin-left: -350px;
+    }
+    .title-wrapper-2 {
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #6BC3F7;
+        box-shadow: 0px 16px 28px 0 rgba(0, 0, 0, 0.22);
+        border-radius: 4px;
+    }
+    .title-wrapper-3 {
+        height: 100%;
+        margin: 8px 12px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+        padding-left: 120px;
+    }
+    .hole {
+        position: absolute;
+        left: 32px;
+        width: 20px;
+        height: 20px;
+        box-shadow: inset 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+        background-color: #6BC3F7;
+    }
+    .hole-1 {
+        top: 180px;
+    }
+    .hole-2 {
+        top: 600px;
+    }
+    .title-1 {
+        margin: 30px 15px;
+    }
+    .title-2 {
+        font-weight: 300;
+        font-size: 20px;
+    }
+    .tab {
+        width: 30px;
+        right: -30px;
+        position: absolute;
+        top: 20px;
+        height: 130px;
+        box-shadow: 3px 4px 9px -5px rgba(0, 0, 0, 0.2);
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        background-color: #6BC3F7;
+    }
+    .margin {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        left: 130px;
+        top: 8px;
+        background-color: #FFE5E1;
+    }
+    .buttons {
+        margin: 80px 40px;
+        text-align: right;
+    }
+    .buttons a {
+        font-size: 22px;
+        padding: 8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgb(33, 150, 243);
+        border-radius: 3px;
+        -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .buttons a:hover {
+        background-color: rgba(158, 158, 158, 0.15);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="backdrop">
+            <img class="logo" src="images/title-1.png" height="56">
+            </img>
+            <div class="social">
+                <a href="" class="fa fa-twitter"></a>
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-github"></a>
+            </div>
+            <div class="title-wrapper-1">
+                <div class="title-wrapper-2">
+                    <div class="title-wrapper-3">
+                        <div>
+                            <img class="title-1" src="images/title-1.png" height="110">
+                        </div>
+                        <div>
+                            <img class="title-2" src="images/title-2.gif" height="28">
+                        </div>
+                        <div class="buttons">
+                            <a href="http://app.classeur.io">Start <span class="mdi-navigation-arrow-forward"></span></a>
+                        </div>
+                    </div>
+                    <div class="hole hole-1"></div>
+                    <div class="hole hole-2"></div>
+                    <div class="margin"></div>
+                    <div class="tab">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

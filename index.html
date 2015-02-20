@@ -3,7 +3,7 @@
 
 <head>
     <title>Classeur</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <style>
     @font-face {
         font-family: 'RobotoDraft';
@@ -71,6 +71,22 @@
     .mdi-navigation-arrow-forward:before {
         content: "\e897";
     }
+    .transition {
+        -webkit-transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .bounce-transition {
+        -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.1);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.1);
+    }
+    .buttons a,
+    .social a {
+        -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .transparent {
+        opacity: 0;
+    }
     body {
         margin: 0;
         font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
@@ -100,23 +116,48 @@
         right: 30px;
     }
     .social a {
-    	font-size: 1.8em;
+        font-size: 1.8em;
         color: rgba(0, 0, 0, 0.7);
         text-decoration: none;
         padding-left: 15px;
     }
-    .title-wrapper-1 {
-        position: relative;
+    .social a:hover {
+        color: rgb(33, 150, 243);
+    }
+    .title-wrapper-1,
+    .buttons {
+        position: absolute;
         width: 640px;
-        height: 100%;
         left: 50%;
         margin-left: -350px;
     }
+    .buttons {
+        text-align: right;
+        bottom: 60px;
+    }
+    .buttons a {
+        font-size: 24px;
+        padding: 8px;
+        margin-right: 50px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgb(33, 150, 243);
+        border-radius: 3px;
+    }
+    .buttons a:hover {
+        background-color: rgba(158, 158, 158, 0.15);
+    }
+    .title-wrapper-1 {
+        top: 25%;
+        height: 100%;
+    }
+    .title-wrapper-1.translate {
+        -webkit-transform: translateY(2000px);
+        -ms-transform: translateY(2000px);
+        transform: translateY(2000px);
+    }
     .title-wrapper-2 {
         position: absolute;
-        margin: auto;
-        top: 50%;
-        bottom: 0;
         width: 100%;
         height: 100%;
         background-color: #6BC3F7;
@@ -128,7 +169,7 @@
         margin: 8px 12px;
         background-color: #fff;
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
-        padding-left: 120px;
+        padding-left: 130px;
     }
     .hole {
         position: absolute;
@@ -146,11 +187,7 @@
         top: 600px;
     }
     .title-1 {
-        margin: 30px 15px;
-    }
-    .title-2 {
-        font-weight: 300;
-        font-size: 20px;
+        margin: 30px -5px 50px;
     }
     .tab {
         width: 30px;
@@ -167,26 +204,149 @@
         position: absolute;
         width: 1px;
         height: 100%;
-        left: 130px;
+        left: 140px;
         top: 8px;
         background-color: #FFE5E1;
     }
-    .buttons {
-        margin: 80px 40px;
-        text-align: right;
+    .scroller {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
     }
-    .buttons a {
+    .editor {
+        color: rgba(0, 0, 0, 0.73);
         font-size: 22px;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: rgb(33, 150, 243);
-        border-radius: 3px;
-        -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin: 0 auto;
+        padding: 200px 15px 200px 140px;
+        font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: normal;
     }
-    .buttons a:hover {
-        background-color: rgba(158, 158, 158, 0.15);
+    * {
+        line-height: 1.5;
+    }
+    pre:focus {
+        outline: none;
+    }
+    .code,
+    .pre {
+        color: #2f2f2f;
+        font: normal 1em monospace;
+    }
+    .tag {
+        color: #2f2f2f;
+        font: bold 1em monospace;
+    }
+    .tag .punctuation,
+    .tag .attr-value,
+    .tag .attr-name {
+        font-weight: normal;
+    }
+    .latex,
+    .math {
+        color: #555;
+    }
+    .entity {
+        font: italic 1em monospace;
+        color: #555;
+    }
+    .table {
+        font: normal 1em monospace;
+    }
+    .table * {
+        font-size: 1em;
+    }
+    .comment {
+        color: rgba(85, 85, 85, 0.4);
+    }
+    .keyword {
+        color: #2f2f2f;
+        font-weight: bold;
+    }
+    .code,
+    .img,
+    .imgref,
+    .md-toc {
+        background-color: #eee;
+        border-radius: 4px;
+        padding: 0.15em 0;
+    }
+    .link .md-underlined-text,
+    .linkref .md-underlined-text {
+        color: inherit;
+    }
+    .blockquote {
+        font-weight: 300;
+    }
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-weight: 600;
+    }
+    .h1,
+    .h11 {
+        font-size: 2em;
+    }
+    .h2,
+    .h22 {
+        font-size: 1.5em;
+    }
+    .h3 {
+        font-size: 1.17em;
+    }
+    .h4 {
+        font-size: 1em;
+    }
+    .h5 {
+        font-size: 0.83em;
+    }
+    .h6 {
+        font-size: 0.75em;
+    }
+    .md-hash {
+        color: rgba(85, 85, 85, 0.4);
+    }
+    .md,
+    .hr {
+        color: rgba(85, 85, 85, 0.4);
+        font-style: normal;
+        font-weight: normal;
+    }
+    .em,
+    .em .md {
+        font-style: italic;
+    }
+    .strong,
+    .strong .md {
+        font-weight: bold;
+    }
+    .md-strike-text {
+        text-decoration: line-through;
+    }
+    .url,
+    .email,
+    .md-underlined-text {
+        text-decoration: underline;
+    }
+    .linkdef .url {
+        color: rgba(85, 85, 85, 0.4);
+    }
+    .img,
+    .imgref {
+        padding: 0.2em 0.4em;
+        padding-right: 0;
+    }
+    .md-bang,
+    .md-alt,
+    .md-title {
+        color: rgba(85, 85, 85, 0.4);
     }
     </style>
 </head>
@@ -194,35 +354,79 @@
 <body>
     <div class="background">
         <div class="backdrop">
-            <img class="logo" src="images/title-1.png" height="56">
+            <img class="logo transparent transition" src="images/title-1.png" height="56">
             </img>
-            <div class="social">
+            <div class="social transparent transition">
                 <a href="" class="fa fa-twitter"></a>
                 <a href="" class="fa fa-facebook"></a>
                 <a href="" class="fa fa-github"></a>
             </div>
-            <div class="title-wrapper-1">
+            <div class="title-wrapper-1 translate bounce-transition">
                 <div class="title-wrapper-2">
                     <div class="title-wrapper-3">
                         <div>
                             <img class="title-1" src="images/title-1.png" height="110">
                         </div>
-                        <div>
-                            <img class="title-2" src="images/title-2.gif" height="28">
-                        </div>
-                        <div class="buttons">
-                            <a href="http://app.classeur.io">Start <span class="mdi-navigation-arrow-forward"></span></a>
+                        <div class="margin"></div>
+                        <div class="scroller">
+                            <pre class="editor"></pre>
                         </div>
                     </div>
                     <div class="hole hole-1"></div>
                     <div class="hole hole-2"></div>
-                    <div class="margin"></div>
                     <div class="tab">
                     </div>
                 </div>
             </div>
+            <div class="buttons transparent transition">
+                <a href="http://app.classeur.io">Start <span class="mdi-navigation-arrow-forward"></span></a>
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangy/1.2.3/rangy-core.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditCore.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditHighlighter.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditKeystroke.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditPrism.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditSelectionMgr.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditUndoMgr.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditUtils.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditWatcher.js"></script>
+    <script src="https://cdn.rawgit.com/classeur/cledit/master/examples/markdownEditor/mdGrammar.js"></script>
+    <script>
+    var editorContent = '> The note-taking **R**evolution.\n';
+    window.rangy.init();
+    var editor = window.cledit(
+        document.querySelector('.editor'),
+        document.querySelector('.scroller')
+    );
+    editor.init({
+        language: window.mdGrammar({
+            fcbs: true,
+            tables: true,
+            strikes: true
+        }),
+        content: editorContent,
+        sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+'
+    });
+
+    function animate(elts) {
+        Array.prototype.slice.call(elts).forEach(function(elt) {
+            elt.className = elt.className.replace(/(?:^|\s)(transparent|translate)(?!\S)/g, '');
+        });
+    }
+    setTimeout(function() {
+        animate(document.querySelectorAll('.logo, .social'));
+    }, 500);
+    setTimeout(function() {
+        animate(document.querySelectorAll('.title-wrapper-1'));
+    }, 1000);
+    setTimeout(function() {
+        animate(document.querySelectorAll('.buttons'));
+        editor.setSelection(editorContent.length, editorContent.length);
+    }, 1700);
+    </script>
 </body>
 
 </html>

@@ -124,7 +124,7 @@
     .social a:hover {
         color: rgb(33, 150, 243);
     }
-    .title-wrapper-1,
+    .wrapper-1,
     .buttons {
         position: absolute;
         width: 640px;
@@ -147,16 +147,19 @@
     .buttons a:hover {
         background-color: rgba(158, 158, 158, 0.15);
     }
-    .title-wrapper-1 {
-        top: 25%;
-        height: 100%;
+    .wrapper-1 {
+        position: absolute;
+        width: 640px;
+        height: 2000px;
+        left: 50%;
+        margin-left: -350px;
     }
-    .title-wrapper-1.translate {
+    .wrapper-1.translate {
         -webkit-transform: translateY(2000px);
         -ms-transform: translateY(2000px);
         transform: translateY(2000px);
     }
-    .title-wrapper-2 {
+    .wrapper-2 {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -164,12 +167,14 @@
         box-shadow: 0px 16px 28px 0 rgba(0, 0, 0, 0.22);
         border-radius: 4px;
     }
-    .title-wrapper-3 {
+    .wrapper-3 {
+        position: absolute;
+        width: 616px;
         height: 100%;
-        margin: 8px 12px;
+        top: 8px;
+        left: 12px;
         background-color: #fff;
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
-        padding-left: 130px;
     }
     .hole {
         position: absolute;
@@ -185,9 +190,6 @@
     }
     .hole-2 {
         top: 600px;
-    }
-    .title-1 {
-        margin: 30px -5px 50px;
     }
     .tab {
         width: 30px;
@@ -205,7 +207,6 @@
         width: 1px;
         height: 100%;
         left: 140px;
-        top: 8px;
         background-color: #FFE5E1;
     }
     .scroller {
@@ -216,11 +217,21 @@
         left: 0;
         overflow: auto;
     }
+    .scroller::before {
+		position: absolute;
+		top: 30px;
+		left: 135px;
+		width: 330px;
+		height: 110px;
+		content: "";
+		background: url(images/logo.png);
+		background-size: 330px 110px;
+    }
     .editor {
         color: rgba(0, 0, 0, 0.73);
         font-size: 22px;
         margin: 0 auto;
-        padding: 200px 15px 200px 140px;
+        padding: 190px 15px 120px 140px;
         font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
         white-space: pre-wrap;
         word-wrap: break-word;
@@ -354,19 +365,16 @@
 <body>
     <div class="background">
         <div class="backdrop">
-            <img class="logo transparent transition" src="images/title-1.png" height="56">
+            <img class="logo transparent transition" src="images/logo.png" height="56">
             </img>
             <div class="social transparent transition">
                 <a href="" class="fa fa-twitter"></a>
                 <a href="" class="fa fa-facebook"></a>
                 <a href="" class="fa fa-github"></a>
             </div>
-            <div class="title-wrapper-1 translate bounce-transition">
-                <div class="title-wrapper-2">
-                    <div class="title-wrapper-3">
-                        <div>
-                            <img class="title-1" src="images/title-1.png" height="110">
-                        </div>
+            <div class="wrapper-1 translate bounce-transition">
+                <div class="wrapper-2">
+                    <div class="wrapper-3">
                         <div class="margin"></div>
                         <div class="scroller">
                             <pre class="editor"></pre>
@@ -385,17 +393,10 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rangy/1.2.3/rangy-core.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditCore.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditHighlighter.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditKeystroke.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditPrism.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditSelectionMgr.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditUndoMgr.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditUtils.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/scripts/cleditWatcher.js"></script>
-    <script src="https://cdn.rawgit.com/classeur/cledit/master/examples/markdownEditor/mdGrammar.js"></script>
+    <script src="cledit/cledit-min.js"></script>
+    <script src="cledit/mdGrammar.js"></script>
     <script>
-    var editorContent = '> The note-taking **R**evolution.\n';
+    var editorContent = '> The note-taking revolution.\n';
     window.rangy.init();
     var editor = window.cledit(
         document.querySelector('.editor'),
@@ -411,6 +412,18 @@
         sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+'
     });
 
+    var wrapperElt = document.querySelector('.wrapper-1');
+    var scrollerElt = document.querySelector('.scroller');
+    function resize() {
+    	var height = window.innerHeight * 3 / 4 | 0;
+    	height = height < 350 ? 350 : height > 800 ? 800 : height;
+    	var top = window.innerHeight - height - 8;
+    	scrollerElt.style.height = height + 'px';
+    	wrapperElt.style.top = top + 'px';
+    }
+    resize();
+    window.onresize = resize;
+
     function animate(elts) {
         Array.prototype.slice.call(elts).forEach(function(elt) {
             elt.className = elt.className.replace(/(?:^|\s)(transparent|translate)(?!\S)/g, '');
@@ -420,7 +433,7 @@
         animate(document.querySelectorAll('.logo, .social'));
     }, 500);
     setTimeout(function() {
-        animate(document.querySelectorAll('.title-wrapper-1'));
+        animate([wrapperElt]);
     }, 1000);
     setTimeout(function() {
         animate(document.querySelectorAll('.buttons'));

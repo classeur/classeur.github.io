@@ -3,8 +3,8 @@
 
 <head>
     <title>Classeur</title>
-	<link rel="canonical" href="http://classeur.io">
-	<link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://classeur.io">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <style>
     @font-face {
@@ -152,14 +152,14 @@
     .wrapper-1 {
         position: absolute;
         width: 640px;
-        height: 2000px;
+        height: 1200px;
         left: 50%;
         margin-left: -350px;
     }
     .wrapper-1.translate {
-        -webkit-transform: translateY(2000px);
-        -ms-transform: translateY(2000px);
-        transform: translateY(2000px);
+        -webkit-transform: translateY(1200px);
+        -ms-transform: translateY(1200px);
+        transform: translateY(1200px);
     }
     .wrapper-2 {
         position: absolute;
@@ -206,8 +206,8 @@
     }
     .pen {
         position: absolute;
-        top: -45px;
-        left: 55px;
+        top: -40px;
+        left: 52px;
     }
     .margin {
         position: absolute;
@@ -225,14 +225,14 @@
         overflow: auto;
     }
     .scroller::before {
-		position: absolute;
-		top: 30px;
-		left: 135px;
-		width: 330px;
-		height: 110px;
-		content: "";
-		background: url(images/logo.png);
-		background-size: 330px 110px;
+        position: absolute;
+        top: 30px;
+        left: 135px;
+        width: 330px;
+        height: 110px;
+        content: "";
+        background: url(images/logo.png);
+        background-size: 330px 110px;
     }
     .editor {
         color: rgba(0, 0, 0, 0.73);
@@ -422,12 +422,13 @@
 
     var wrapperElt = document.querySelector('.wrapper-1');
     var scrollerElt = document.querySelector('.scroller');
+
     function resize() {
-    	var height = window.innerHeight * 3 / 4 | 0;
-    	height = height < 350 ? 350 : height > 800 ? 800 : height;
-    	var top = window.innerHeight - height - 8;
-    	scrollerElt.style.height = height + 'px';
-    	wrapperElt.style.top = top + 'px';
+        var height = window.innerHeight * 3 / 4 | 0;
+        height = height < 350 ? 350 : height > 800 ? 800 : height;
+        var top = window.innerHeight - height - 8;
+        scrollerElt.style.height = height + 'px';
+        wrapperElt.style.top = top + 'px';
     }
     resize();
     window.onresize = resize;

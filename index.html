@@ -6,49 +6,8 @@
     <link rel="canonical" href="http://classeur.io">
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <style>
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: normal;
-        font-weight: 300;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbXcjzEax2LfQAlK8DdMzhA.eot);
-        src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbXcjzEax2LfQAlK8DdMzhA.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwR_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
-    }
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni2fQcKutQXcIrRfyR5jdjY8.eot);
-        src: local('RobotoDraft'), local('RobotoDraft-Regular'), url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni2fQcKutQXcIrRfyR5jdjY8.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/0xES5Sl_v6oyT7dAKuoni4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
-    }
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: normal;
-        font-weight: 700;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbFt29aCHKT7otDW9l62Aag.eot);
-        src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwbFt29aCHKT7otDW9l62Aag.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/u0_CMoUf3y3-4Ss4ci-VwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
-    }
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: italic;
-        font-weight: 300;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt51NjWrQGkHHRlfZ8BWrO3Hg.eot);
-        src: local('RobotoDraft Light Italic'), local('RobotoDraft-LightItalic'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt51NjWrQGkHHRlfZ8BWrO3Hg.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt5zri8ykLuesnP4qBvpSenQU.woff) format('woff');
-    }
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: italic;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTfqSxSvC1lIsK_unZDHWqTBg.eot);
-        src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTfqSxSvC1lIsK_unZDHWqTBg.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/er-TIW55l9KWsTS1x9bTftkZXW4sYc4BjuAIFc1SXII.woff) format('woff');
-    }
-    @font-face {
-        font-family: 'RobotoDraft';
-        font-style: italic;
-        font-weight: 700;
-        src: url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt59mkQI_kos-lIOeNt19QAas.eot);
-        src: local('RobotoDraft Bold Italic'), local('RobotoDraft-BoldItalic'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt59mkQI_kos-lIOeNt19QAas.eot) format('embedded-opentype'), url(https://fonts.gstatic.com/s/robotodraft/v3/5SAvdU0uYYlH8OURAykt5wRV2F9RPTaqyJ4QibDfkzM.woff) format('woff');
-    }
     @font-face {
         font-family: "Material-Design-Icons";
         src: url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/fonts/Material-Design-Icons.eot?-g7cqhn");
@@ -56,6 +15,7 @@
         font-weight: normal;
         font-style: normal;
     }
+    
     [class^="mdi-"],
     [class*=" mdi-"] {
         font-family: "Material-Design-Icons";
@@ -70,62 +30,72 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+    
     .mdi-navigation-arrow-forward:before {
         content: "\e897";
     }
+    
     .transition {
         -webkit-transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
         transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
+    
     .bounce-transition {
         -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.1);
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.1);
     }
+    
     .buttons a,
     .social a {
         -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
+    
     .transparent {
         opacity: 0;
     }
+    
     body {
         margin: 0;
         font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
     }
+    
     .background,
     .backdrop {
         position: absolute;
         width: 100%;
         height: 100%;
     }
+    
     .background {
         position: fixed;
         background: url(images/landing-bg.jpg) no-repeat center center;
         background-size: cover;
     }
-    .backdrop {
-        background-color: rgba(237, 234, 230, 0.8);
-    }
+    
     .logo {
         position: absolute;
         top: 5px;
         left: 25px;
     }
+    
     .social {
         position: absolute;
         top: 25px;
         right: 30px;
     }
+    
     .social a {
         font-size: 1.8em;
         color: rgba(0, 0, 0, 0.7);
         text-decoration: none;
         padding-left: 15px;
     }
+    
     .social a:hover {
         color: rgb(33, 150, 243);
     }
+    
     .wrapper-1,
     .buttons {
         position: absolute;
@@ -133,10 +103,12 @@
         left: 50%;
         margin-left: -350px;
     }
+    
     .buttons {
         text-align: right;
         bottom: 60px;
     }
+    
     .buttons a {
         font-size: 24px;
         padding: 8px;
@@ -146,9 +118,11 @@
         color: rgb(33, 150, 243);
         border-radius: 3px;
     }
+    
     .buttons a:hover {
         background-color: rgba(158, 158, 158, 0.15);
     }
+    
     .wrapper-1 {
         position: absolute;
         width: 640px;
@@ -156,11 +130,13 @@
         left: 50%;
         margin-left: -350px;
     }
+    
     .wrapper-1.translate {
         -webkit-transform: translateY(1200px);
         -ms-transform: translateY(1200px);
         transform: translateY(1200px);
     }
+    
     .wrapper-2 {
         position: absolute;
         width: 100%;
@@ -169,6 +145,7 @@
         box-shadow: 0px 16px 28px 0 rgba(0, 0, 0, 0.22);
         border-radius: 4px;
     }
+    
     .wrapper-3 {
         position: absolute;
         width: 616px;
@@ -178,6 +155,7 @@
         background-color: #fff;
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
     }
+    
     .hole {
         position: absolute;
         left: 32px;
@@ -187,12 +165,15 @@
         border-radius: 10px;
         background-color: #6BC3F7;
     }
+    
     .hole-1 {
         top: 180px;
     }
+    
     .hole-2 {
         top: 600px;
     }
+    
     .tab {
         width: 30px;
         right: -30px;
@@ -204,11 +185,13 @@
         border-bottom-right-radius: 12px;
         background-color: #6BC3F7;
     }
+    
     .pen {
         position: absolute;
-        top: -40px;
+        top: -36px;
         left: 52px;
     }
+    
     .margin {
         position: absolute;
         width: 1px;
@@ -216,6 +199,7 @@
         left: 140px;
         background-color: #FFE5E1;
     }
+    
     .scroller {
         position: absolute;
         top: 0;
@@ -224,67 +208,81 @@
         left: 0;
         overflow: auto;
     }
+    
     .scroller::before {
         position: absolute;
         top: 30px;
         left: 135px;
-        width: 330px;
-        height: 110px;
+        width: 345px;
+        height: 115px;
         content: "";
-        background: url(images/logo.png);
-        background-size: 330px 110px;
+        background: url(images/logo-big.png);
+        background-size: 345px 115px;
     }
+    
     .editor {
         color: rgba(0, 0, 0, 0.73);
-        font-size: 22px;
+        font-size: 20px;
         margin: 0 auto;
         padding: 190px 15px 120px 140px;
-        font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+        font-family: Roboto, 'Helvetica Neue', sans-serif;
         white-space: pre-wrap;
         word-wrap: break-word;
         word-break: normal;
     }
+    
     * {
         line-height: 1.5;
     }
+    
     pre:focus {
         outline: none;
     }
+    
     .code,
     .pre {
         color: #2f2f2f;
         font: normal 1em monospace;
     }
+    
     .tag {
         color: #2f2f2f;
         font: bold 1em monospace;
     }
+    
     .tag .punctuation,
     .tag .attr-value,
     .tag .attr-name {
         font-weight: normal;
     }
+    
     .latex,
     .math {
         color: #555;
     }
+    
     .entity {
         font: italic 1em monospace;
         color: #555;
     }
+    
     .table {
         font: normal 1em monospace;
     }
+    
     .table * {
         font-size: 1em;
     }
+    
     .comment {
         color: rgba(85, 85, 85, 0.4);
     }
+    
     .keyword {
         color: #2f2f2f;
         font-weight: bold;
     }
+    
     .code,
     .img,
     .imgref,
@@ -293,13 +291,16 @@
         border-radius: 4px;
         padding: 0.15em 0;
     }
+    
     .link .md-underlined-text,
     .linkref .md-underlined-text {
         color: inherit;
     }
+    
     .blockquote {
         font-weight: 300;
     }
+    
     .h1,
     .h2,
     .h3,
@@ -308,59 +309,74 @@
     .h6 {
         font-weight: 600;
     }
+    
     .h1,
     .h11 {
         font-size: 2em;
     }
+    
     .h2,
     .h22 {
         font-size: 1.5em;
     }
+    
     .h3 {
         font-size: 1.17em;
     }
+    
     .h4 {
         font-size: 1em;
     }
+    
     .h5 {
         font-size: 0.83em;
     }
+    
     .h6 {
         font-size: 0.75em;
     }
+    
     .md-hash {
         color: rgba(85, 85, 85, 0.4);
     }
+    
     .md,
     .hr {
         color: rgba(85, 85, 85, 0.4);
         font-style: normal;
         font-weight: normal;
     }
+    
     .em,
     .em .md {
         font-style: italic;
     }
+    
     .strong,
     .strong .md {
         font-weight: bold;
     }
+    
     .md-strike-text {
         text-decoration: line-through;
     }
+    
     .url,
     .email,
     .md-underlined-text {
         text-decoration: underline;
     }
+    
     .linkdef .url {
         color: rgba(85, 85, 85, 0.4);
     }
+    
     .img,
     .imgref {
         padding: 0.2em 0.4em;
         padding-right: 0;
     }
+    
     .md-bang,
     .md-alt,
     .md-title {
@@ -371,53 +387,50 @@
 
 <body>
     <div class="background">
-        <div class="backdrop">
-            <img class="logo transparent transition" src="images/logo.png" height="56">
-            </img>
-            <div class="social transparent transition">
-                <a href="" class="fa fa-twitter"></a>
-                <a href="" class="fa fa-facebook"></a>
-                <a href="" class="fa fa-github"></a>
-            </div>
-            <div class="wrapper-1 translate bounce-transition">
-                <div class="wrapper-2">
-                    <div class="wrapper-3">
-                        <div class="margin"></div>
-                        <img class="pen" src="images/pen.png" width="44">
-                        <div class="scroller">
-                            <pre class="editor"></pre>
-                        </div>
-                    </div>
-                    <div class="hole hole-1"></div>
-                    <div class="hole hole-2"></div>
-                    <div class="tab">
+        <img class="logo transparent transition" src="images/logo.png" height="55">
+        </img>
+        <div class="social transparent transition">
+            <a href="" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-facebook"></a>
+            <a href="" class="fa fa-github"></a>
+        </div>
+        <div class="wrapper-1 translate bounce-transition">
+            <div class="wrapper-2">
+                <div class="wrapper-3">
+                    <div class="margin"></div>
+                    <img class="pen" src="images/pen.png" width="40">
+                    <div class="scroller">
+                        <pre class="editor"></pre>
                     </div>
                 </div>
+                <div class="hole hole-1"></div>
+                <div class="hole hole-2"></div>
+                <div class="tab">
+                </div>
             </div>
-            <div class="buttons transparent transition">
-                <a href="http://app.classeur.io">Start <span class="mdi-navigation-arrow-forward"></span></a>
-            </div>
+        </div>
+        <div class="buttons transparent transition">
+            <a href="http://app.classeur.io">Start <span class="mdi-navigation-arrow-forward"></span></a>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rangy/1.2.3/rangy-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
     <script src="cledit/cledit-min.js"></script>
     <script src="cledit/mdGrammar.js"></script>
     <script>
-    var editorContent = '> The note-taking revolution.\n';
+    var editorContent = '> From notes to blogs, using Markdown.\n';
     window.rangy.init();
     var editor = window.cledit(
         document.querySelector('.editor'),
         document.querySelector('.scroller')
     );
     editor.init({
-        language: window.mdGrammar({
-            fcbs: true,
-            tables: true,
-            strikes: true
-        }),
         content: editorContent,
-        sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+'
+        sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+',
+        highlighter: function(text) {
+            return Prism.highlight(text, window.mdGrammar());
+        }
     });
 
     var wrapperElt = document.querySelector('.wrapper-1');

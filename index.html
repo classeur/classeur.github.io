@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <title>Classeur</title>
+    <title>Classeur – Notes, blogs, with Markdown</title>
     <link rel="canonical" href="http://classeur.io">
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <meta name="description" content="Write notes easily with Markdown and post them to your Blog.">
+    <meta charset="UTF-8">
     <style>
     @font-face {
         font-family: "Material-Design-Icons";
@@ -222,7 +224,7 @@
     
     .editor {
         color: rgba(0, 0, 0, 0.73);
-        font-size: 20px;
+        font-size: 22px;
         margin: 0 auto;
         padding: 190px 15px 120px 140px;
         font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -420,7 +422,7 @@
     <script src="cledit/prism-core.min.js"></script>
     <script src="cledit/mdGrammar.js"></script>
     <script>
-    var editorContent = '> From notes to blogs, using Markdown.\n';
+    var editorContent = '> Notes, blogs, with *Markdown*.\n';
     window.rangy.init();
     var editor = window.cledit(
         document.querySelector('.editor'),

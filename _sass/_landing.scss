@@ -2,6 +2,10 @@
     visibility: hidden;
 }
 
+.no-display {
+    display: none !important;
+}
+
 .btn {
     display: inline-block;
     font-size: 18px;
@@ -148,9 +152,9 @@ br {
         background-size: 345px 115px;
     }
     .content {
-        font-size: 24px;
+        font-size: 23px;
         margin: 0 auto;
-        padding: 200px 15px 120px 134px;
+        padding: 210px 15px 120px 134px;
         font-family: Roboto, 'Helvetica Neue', sans-serif;
         -webkit-font-variant-ligatures: normal;
         font-variant-ligatures: normal;
@@ -213,6 +217,7 @@ $start-option-height-medium: 150px;
         height: $start-option-height;
         border-radius: 3px;
         font-size: 40px;
+        cursor: pointer;
         .text {
             padding-top: 1.3em;
         }

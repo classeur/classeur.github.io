@@ -1,7 +1,7 @@
 (function() {
     window.BezierEasing.css.materialOut = window.BezierEasing(0.25, 0.8, 0.25, 1.0);
     window.BezierEasing.css.outBack = window.BezierEasing(0.175, 0.885, 0.320, 1.125);
-    var editorContent = '> Re-enjoy writing, using Markdown.\n';
+    var editorContent = '> Re-enjoy writing, with Markdown.\n';
     var editor = window.cledit(
         document.querySelector('.content'),
         document.querySelector('.scroller')
@@ -60,7 +60,7 @@
     function onScroll() {
         var threshold = window.innerHeight - 120;
         optionElts.forEach(function(elt) {
-            if(!elt.isShown && elt.getBoundingClientRect().top < threshold) {
+            if (!elt.isShown && elt.getBoundingClientRect().top < threshold) {
                 elt.isShown = true;
                 elt.clanim.opacity(1).translateY(0).duration(600).easing('materialOut').start(true);
             }
@@ -76,6 +76,21 @@
     socialBtns.forEach(function(elt) {
         elt.clanim.duration(400).easing('materialOut').start(true);
     });
+    if (navigator.appVersion.indexOf('Mac') != -1) {
+        document.querySelector('.osx.option').classList.remove('no-display');
+    }
+    if (navigator.appVersion.indexOf('Win') != -1) {
+        document.querySelector('.windows.option').classList.remove('no-display');
+    }
+    if (navigator.appVersion.indexOf('Linux') != -1) {
+        document.querySelector('.linux.option').classList.remove('no-display');
+    }
+    if (window.chrome) {
+        document.querySelector('.chrome.option').classList.remove('no-display');
+    }
+    if (typeof InstallTrigger !== 'undefined') {
+        document.querySelector('.firefox.option').classList.remove('no-display');
+    }
     onResize();
     onScroll();
 

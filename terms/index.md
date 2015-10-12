@@ -45,3 +45,5 @@ Any questions about this document should be addressed to the support:
 
 support@classeur.io
 
+This document was last updated on October 12, 2015.
+

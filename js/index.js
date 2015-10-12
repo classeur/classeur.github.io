@@ -31,6 +31,7 @@
     startBtnElt.addEventListener('click', function(evt) {
         evt.preventDefault();
         document.body.clanim.scrollTop(window.innerHeight).duration(800).easing('materialOut').start();
+        document.querySelector('html').clanim.scrollTop(window.innerHeight).duration(800).easing('materialOut').start();
     });
 
     var wrapperY = 1200;

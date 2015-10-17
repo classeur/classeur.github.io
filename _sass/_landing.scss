@@ -68,11 +68,14 @@ br {
         left: 50%;
         width: 200px;
         bottom: 10px;
-        padding: 8px 0 4px;
+        padding: 0;
         font-size: 50px;
         color: rgb(33, 150, 243);
+        line-height: 36px;
         .icon {
-            line-height: 36px;
+            display: inline-block;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
         }
     }
     .wrapper-1 {

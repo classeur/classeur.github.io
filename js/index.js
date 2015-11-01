@@ -1,7 +1,7 @@
 (function() {
     window.BezierEasing.css.materialOut = window.BezierEasing(0.25, 0.8, 0.25, 1.0);
     window.BezierEasing.css.outBack = window.BezierEasing(0.175, 0.885, 0.320, 1.125);
-    var editorContent = '> Re-enjoy writing, with Markdown.\n';
+    var editorContent = '> Re-enjoy writing, with *Markdown*.\n';
     var editor = window.cledit(
         document.querySelector('.content'),
         document.querySelector('.scroller')
@@ -70,7 +70,7 @@
     window.addEventListener('scroll', onScroll);
 
     headerElt.clanim.opacity(0).start().classList.remove('hidden');
-    startBtnElt.clanim.opacity(0).translateX(-startBtnElt.offsetWidth / 2).start().classList.remove('hidden');
+    startBtnElt.clanim.opacity(0).translateX(-startBtnElt.offsetWidth / 2).translateY(-20).start().classList.remove('hidden');
     optionElts.forEach(function(elt) {
         elt.clanim.opacity(0).translateY(40).start().classList.remove('hidden');
     });
@@ -101,7 +101,7 @@
             wrapperY = 0;
             wrapperElt.clanim.scale(wrapperRatio).translateY(wrapperY).duration(500).easing('outBack').start(true).classList.remove('hidden');
             setTimeout(function() {
-                startBtnElt.clanim.opacity(1).duration(600).easing('materialOut').start(true);
+                startBtnElt.clanim.opacity(1).translateY(0).duration(1000).easing('materialOut').start(true);
                 editor.setSelection(editorContent.length, editorContent.length);
             }, 1000);
         }, 500);

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+    {% assign paths = 'extensions|templates|rest api|enterprise' | split: '|' %}
+    <div class="container">
+        <div class="left-column">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/logo.png">
+                    </img>
+                </a>
+            </div>
+            {% if page.url == '/help/index.html' %}
+            <a class="btn active">Help</a> {% else %}
+            <a class="btn" href="/help/">Help</a> {% endif %} {% for path in paths %} {% capture url %}/{{ path | replace: ' ', '-' }}/index.html{% endcapture %} {% if page.url == url %}
+            <a class="btn active">{{ path }}</a> {% else %}
+            <a class="btn" href="/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
+        </div>
+        <div class="right-column">
+            {{ content }} {% include footer.html %}
+        </div>
+    </div>
+    {% include analytics.html %}
+</body>
+
+</html>

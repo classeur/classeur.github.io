@@ -47,6 +47,7 @@ body {
     }
     .btn {
         display: block;
+        padding: 8px;
         &.active {
             cursor: default;
             color: rgba(85, 85, 85, 0.4);

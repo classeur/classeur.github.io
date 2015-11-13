@@ -3,21 +3,24 @@
 {% include head.html %}
 
 <body>
-    <div class="fixed-header">
-        <div class="container narrow header">
-            <a href="..">
-                <img class="logo" src="../img/logo.png" height="60">
-                </img>
-            </a>
+    {% assign paths = 'privacy|terms' | split: '|' %}
+    <div class="container">
+        <div class="left-column">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/logo.png">
+                    </img>
+                </a>
+            </div>
+            {% for path in paths %} {% capture url %}/{{ path }}/index.html{% endcapture %} {% if page.url == url %}
+            <a class="btn active">{{ path }}</a>
+            {% else %}
+            <a class="btn" href="/{{ path }}/">{{ path }}</a>
+            {% endif %} {% endfor %}
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container narrow">
-        {{ content }} {% include footer.html %}
+        <div class="right-column">
+            {{ content }} {% include footer.html %}
+        </div>
     </div>
     {% include analytics.html %}
 </body>

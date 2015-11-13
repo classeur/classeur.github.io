@@ -59,7 +59,7 @@
     window.addEventListener('resize', onResize);
 
     function onScroll() {
-        var threshold = window.innerHeight - 120;
+        var threshold = window.innerHeight - 80;
         optionElts.forEach(function(elt) {
             if (!elt.isShown && elt.getBoundingClientRect().top < threshold) {
                 elt.isShown = true;

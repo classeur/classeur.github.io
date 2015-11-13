@@ -2,6 +2,7 @@ $text-color: #333;
 $small-width: 420px;
 $medium-width: 600px;
 $body-background-color: #FAF7F2;
+$left-column-width: 220px;
 body {
     background-color: $body-background-color;
     margin: 0;
@@ -14,7 +15,9 @@ body {
     text-align: justify;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -28,20 +31,35 @@ body {
     }
 }
 
-.fixed-header {
+.left-column {
     position: fixed;
-    width: 100%;
+    width: $left-column-width;
     z-index: 1;
     top: 0;
+    .logo {
+        width: 100%;
+        img {
+            margin: 4px 0;
+            width: 165px;
+            height: 55px;
+        }
+        margin-bottom: 10px;
+    }
+    .btn {
+        display: block;
+        &.active {
+            cursor: default;
+            color: rgba(85, 85, 85, 0.4);
+            &:hover {
+                background-color: transparent;
+                color: rgba(85, 85, 85, 0.4);
+            }
+        }
+    }
 }
 
-.header {
-    width: 100%;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-    background-color: $body-background-color;
-    .logo {
-        margin: 5px 0;
-    }
+.right-column {
+    padding-left: $left-column-width + 40;
 }
 
 .footer {

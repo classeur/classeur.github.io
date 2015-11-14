@@ -1,4 +1,5 @@
 ---
+layout: help
 
 ---
 
@@ -19,4 +20,5 @@ Here is a non exhaustive list of things Classeur is good at:
 - **Publish to the web.**
 
 	By linking Classeur with your blogs, you can easily publish and update your blog posts in one click. Classeur supports multiple blogging platforms: Blogger, Wordpress, GitHub.
+
 

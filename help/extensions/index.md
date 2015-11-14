@@ -25,7 +25,9 @@ ext:markdown:fence
 
 ### Abbreviations
 
-A description of markdown abbreviations can be found [here](https://www.npmjs.com/package/markdown-it-abbr). To disable abbreviations, set the file property `ext:markdown:abbr` to `false`.
+A description of markdown abbreviations can be found [here](https://www.npmjs.com/package/markdown-it-abbr).
+
+To disable abbreviations, set the file property `ext:markdown:abbr` to `false`.
 
 ### Breaks
 

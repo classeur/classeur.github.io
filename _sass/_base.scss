@@ -21,6 +21,29 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    color: #316ED3;
+}
+
+code, kbd, pre, samp {
+    font-family: "Lucida Sans Typewriter",Monaco,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",monospace;
+    font-size: 0.91em;
+}
+
+code {
+    padding: 2px 4px;
+    background: rgba(0,0,0,0.04);
+    border-radius: 4px;
+    pre > & {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: rgba(0,0,0,0.04);
+        text-shadow: 0 1px white;
+        -webkit-text-size-adjust: none;
+    }
+}
+
 .container {
     position: relative;
     max-width: 920px;
@@ -54,6 +77,26 @@ body {
             &:hover {
                 background-color: transparent;
                 color: rgba(85, 85, 85, 0.4);
+            }
+        }
+    }
+    .headers {
+        .header {
+            display: block;
+            padding: 6px;
+            padding-left: 16px;
+            color: rgba(85, 85, 85, 0.4);
+            &:hover {
+                color: rgba(85, 85, 85, 0.6);
+            }
+            text-decoration: none;
+            &.small {
+                font-size: 0.8em;                
+                padding: 2px;
+                padding-left: 24px;
+            }
+            &:last-child {
+                margin-bottom: 16px;
             }
         }
     }

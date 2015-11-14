@@ -12,7 +12,7 @@
                     </img>
                 </a>
             </div>
-            {% for path in paths %} {% capture url %}/{{ path }}/index.html{% endcapture %} {% if page.url == url %}
+            {% for path in paths %} {% capture url %}/{{ path | replace: ' ', '-' }}/{% endcapture %} {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %} {% if pageUrl == url %}
             <a class="btn active">{{ path }}</a>
             {% else %}
             <a class="btn" href="/{{ path }}/">{{ path }}</a>

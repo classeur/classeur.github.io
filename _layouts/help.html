@@ -12,9 +12,10 @@
                     </img>
                 </a>
             </div>
-            {% if page.url == '/help/index.html' %}
+            {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %}
+            {% if pageUrl == '/help/' %}
             <a class="btn active">Help</a> {% else %}
-            <a class="btn" href="/help/">Help</a> {% endif %} {% for path in paths %} {% capture url %}/{{ path | replace: ' ', '-' }}/index.html{% endcapture %} {% if page.url == url %}
+            <a class="btn" href="/help/">Help</a> {% endif %} {% for path in paths %} {% capture url %}/help/{{ path | replace: ' ', '-' }}/{% endcapture %} {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %} {% if pageUrl == url %}
             <a class="btn active">{{ path }}</a> {% else %}
             <a class="btn" href="/help/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
         </div>
@@ -22,6 +23,28 @@
             {{ content }} {% include footer.html %}
         </div>
     </div>
+    <script>
+    var activeBtnElt = document.querySelector('.btn.active');
+    if(activeBtnElt) {
+        var headerElts = Array.prototype.slice.call(document.querySelectorAll('h2,h3'));
+        var headerContainer = document.createElement('div');
+        headerContainer.className = 'headers';
+        headerElts.forEach(function(elt) {
+            if (elt.id) {
+                var headerElt = document.createElement('a');
+                headerElt.href = '#' + elt.id;
+                headerElt.textContent = elt.textContent;
+                if (elt.tagName === 'H2') {
+                    headerElt.className = 'header';
+                } else {
+                    headerElt.className = 'small header';
+                }
+                headerContainer.appendChild(headerElt);
+            }
+        });
+        activeBtnElt.parentNode.insertBefore(headerContainer, activeBtnElt.nextSibling);
+    }
+    </script>
     {% include analytics.html %}
 </body>
 

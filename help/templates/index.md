@@ -12,7 +12,7 @@ Classeur uses [Handlebars](http://handlebarsjs.com/) (a Mustache template engine
 
 When processing a file, Handlebars receives the following context along with the template:
 
-```json
+```javascript
 {
 	"file": {
 		"name": "The filename",
@@ -53,7 +53,7 @@ The `toYaml` helper allows you to convert an object into YAML. Typically, to gen
 
 If you need more control, you can always create your own helpers in the settings. For example:
 
-```js
+```javascript
 Handlebars.registerHelper('transform', function(options) {
     var result = options.fn(this);
     return new Handlebars.SafeString(

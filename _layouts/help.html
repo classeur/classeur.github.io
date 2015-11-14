@@ -16,7 +16,7 @@
             <a class="btn active">Help</a> {% else %}
             <a class="btn" href="/help/">Help</a> {% endif %} {% for path in paths %} {% capture url %}/{{ path | replace: ' ', '-' }}/index.html{% endcapture %} {% if page.url == url %}
             <a class="btn active">{{ path }}</a> {% else %}
-            <a class="btn" href="/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
+            <a class="btn" href="/help/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
         </div>
         <div class="right-column">
             {{ content }} {% include footer.html %}

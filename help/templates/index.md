@@ -34,7 +34,7 @@ So, for example:
 - the expression `{% raw  %}{{{ file.content.html }}}{% endraw %}` will be replace by `<p>The content of your file</p>`.
 
 
-## Default helpers
+## Helpers
 
 In addition to the default Handlebars helpers, Classeur adds its own ones.
 
@@ -42,14 +42,16 @@ In addition to the default Handlebars helpers, Classeur adds its own ones.
 
 The `toYaml` helper allows you to convert an object into YAML. Typically, to generate a YAML front matter from your file properties, you can prefix your template with:
 
+{% raw  %}
 ```
----{% raw  %}
+---
 {{#toYaml file.content.properties}}{{/toYaml}}
----{% endraw %}
+---
 ```
+{% endraw %}
 
 
-## Custom helpers
+### Custom helpers
 
 If you need more control, you can always create your own helpers in the settings. For example:
 

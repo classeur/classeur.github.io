@@ -30,7 +30,7 @@ When processing a file, Handlebars receives the following context along with the
 
 So, for example:
 
-- the expression `{{ " {{ file.name " }}}}` will be replaced by `The filename` (HTML-escaped),
+- the expression `{{ file.name }}` will be replaced by `The filename` (HTML-escaped),
 - the expression `{{{ file.content.html }}}` will be replace by `<p>The content of your file</p>`.
 
 
@@ -43,9 +43,9 @@ In addition to the default Handlebars helpers, Classeur adds its own ones.
 The `toYaml` helper allows you to convert an object into YAML. Typically, to generate a YAML front matter from your file properties, you can prefix your template with:
 
 ```
----
-{{"{{#toYaml file.content.properties"}}}}{{"{{/toYaml"}}}}
----
+---{% raw  %}
+{{#toYaml file.content.properties}}{{/toYaml}}
+---{% endraw %}
 ```
 
 

@@ -5,7 +5,7 @@ layout: help
 
 # Templates
 
-Classeur uses [Handlebars](http://handlebarsjs.com/) (a Mustache template engine) when exporting files to your disk or when publishing blog posts. You can modify existing templates or create your own one, and have full control over the data you export.
+Classeur uses [Handlebars](http://handlebarsjs.com/), a Mustache compatible template engine, when exporting files to your disk or when publishing blog posts. Classeur lets you modify existing templates or create your own one, and have full control over the data you export.
 
 
 ## File context
@@ -28,7 +28,7 @@ When processing a file, Handlebars receives the following context along with the
 }
 ```
 
-So, for example:
+For example:
 
 - the expression `{% raw  %}{{ file.name }}{% endraw %}` will be replaced by `The filename` (HTML-escaped),
 - the expression `{% raw  %}{{{ file.content.html }}}{% endraw %}` will be replace by `<p>The content of your file</p>`.

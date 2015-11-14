@@ -1,5 +1,4 @@
 ---
-layout: help
 
 ---
 
@@ -7,7 +6,7 @@ layout: help
 
 Classeur is your new app to write simple notes as well as technical documents and blogs.
 
-Here is a non exhaustive list of things Classeur is good at:
+Here is a non exhaustive list of things Classeur will help you with:
 
 - **Write in Markdown.**
 
@@ -20,5 +19,4 @@ Here is a non exhaustive list of things Classeur is good at:
 - **Publish to the web.**
 
 	By linking Classeur with your blogs, you can easily publish and update your blog posts in one click. Classeur supports multiple blogging platforms: Blogger, Wordpress, GitHub.
-
 

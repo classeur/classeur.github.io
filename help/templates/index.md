@@ -30,8 +30,8 @@ When processing a file, Handlebars receives the following context along with the
 
 So, for example:
 
-- the expression `{{ file.name }}` will be replaced by `The filename` (HTML-escaped),
-- the expression `{{{ file.content.html }}}` will be replace by `<p>The content of your file</p>`.
+- the expression `{% raw  %}{{ file.name }}{% endraw %}` will be replaced by `The filename` (HTML-escaped),
+- the expression `{% raw  %}{{{ file.content.html }}}{% endraw %}` will be replace by `<p>The content of your file</p>`.
 
 
 ## Default helpers

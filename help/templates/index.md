@@ -44,7 +44,7 @@ The `toYaml` helper allows you to convert an object into YAML. Typically, to gen
 
 ```
 ---
-{{#toYaml file.content.properties}}{{/toYaml}}
+{{"{{#toYaml file.content.properties"}}}}{{"{{/toYaml"}}}}
 ---
 ```
 

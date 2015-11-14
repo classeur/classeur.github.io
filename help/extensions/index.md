@@ -7,7 +7,7 @@ layout: help
 
 Extensions can be enabled/disabled via file properties. For example, to enable Emoji, create a property with key `ext:emoji` and value `true`:
 
-![enter image description here](https://i.imgur.com/vwOOmiw.png)
+![enter image description here](https://i.imgur.com/v5WRILY.png)
 
 
 ## Markdown

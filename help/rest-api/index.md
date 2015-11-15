@@ -20,9 +20,11 @@ curl https://app.classeur.io/api/v1/files/F5QZgtHR1CCEgRN8p5Xc \
 
 ### Retrieve a file
 
-`GET /api/v1/files/{fileId}`
-`GET /api/v1/files/{fileId}/fromRev/{fromRev}`
-`GET /api/v1/files/{fileId}/fromRev/{fromRev}/toRev/{toRev}`
+```
+GET /api/v1/files/{fileId}
+GET /api/v1/files/{fileId}/fromRev/{fromRev}
+GET /api/v1/files/{fileId}/fromRev/{fromRev}/toRev/{toRev}
+```
 
 Parameter | Description
 --------: | ---

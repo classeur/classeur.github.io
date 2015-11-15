@@ -5,14 +5,15 @@ layout: help
 
 # Extensions
 
-Extensions can be enabled/disabled via file properties. For example, to enable Emoji, create a property with key `ext:emoji` and value `true`.
+Extensions can be enabled/disabled via file properties. For example, to enable emojies in your file, create a property with the key `ext:emoji` and the value `true`.
 
 ![enter image description here](https://i.imgur.com/v5WRILY.png)
 
+Also you can enable extensions by modifying the default properties in the settings.
 
 ## Markdown
 
-All the following markdown extensions are enabled by default.
+All the following Markdown extensions are enabled by default.
 
 ```
 ext:markdown:abbr
@@ -103,7 +104,7 @@ To disable table of contents, set the property `ext:markdown:toc` to `false`.
 
 The MathJax extension is enabled by default. The TeX delimiters are [those used by pandoc](http://pandoc.org/README.html#math).
 
-To configure MathJax, you can specify a JSON value for properties `ext:mathjax:tex` and `ext:mathjax:tex2jax`.
+To configure MathJax, you can specify JSON values for properties `ext:mathjax:tex` and `ext:mathjax:tex2jax`.
 To disable MathJax, set the property `ext:mathjax` to `false`.
 
 

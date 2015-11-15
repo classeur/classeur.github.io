@@ -32,6 +32,24 @@ h1 {
     margin-bottom: 1.3em;
 }
 
+td, th {
+    padding: 8px;
+}
+
+td {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    em {
+        display: block;
+    }
+}
+
+blockquote {
+    font-weight: 300;
+    padding-left: 2em;
+    margin-left: 0;
+    border-left: 5px solid #eee;
+}
+
 a {
     color: #316ED3;
 }

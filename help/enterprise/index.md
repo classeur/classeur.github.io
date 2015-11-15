@@ -12,7 +12,7 @@ layout: help
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
 - A Classeur Enterprise license file (email contact@classeur.io for a demo license)
 
-We recommend using [Ubuntu Server 14.04 LTS](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
+For Amazon EC2, we recommend using [Ubuntu Server 14.04 LTS](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
 
 
 ## Installation

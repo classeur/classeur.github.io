@@ -8,6 +8,7 @@ layout: help
 
 ## Prerequisites
 
+
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
 - A Classeur Enterprise license file (email contact@classeur.io for a demo license)
 
@@ -16,9 +17,10 @@ We recommend using [Ubuntu Server 14.04 LTS](https://aws.amazon.com/marketplace/
 
 ## Installation
 
+
 ### Firewall and EC2 Security Group
 
-Classeur Enterprise requires specific ports to be open on the host. From the EC2 management console, create an entry for each port in the table below:
+Classeur Enterprise requires specific ports to be open on the server. From the EC2 management console, create an entry for each port in the table below:
 
 Port | Service | Description
 ---- | ------- | ---
@@ -35,7 +37,7 @@ Port | Service | Description
 2. Run this install script
 
 	```bash
-	$ curl -sSL https://get.replicated.com | sudo sh
+	$ curl -sSL https://get.classeur.io | sudo sh
 	```
 
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.

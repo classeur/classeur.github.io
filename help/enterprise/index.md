@@ -39,23 +39,18 @@ Port | Service | Description
 	```
 
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.
-
 ![enter image description here](https://i.imgur.com/JFrIBD9.png)
 
 4. Upload a custom TLS/SSL cert/key or proceed with the provided self-signed pair.
-
 ![enter image description here](https://i.imgur.com/26QKbd2.png)
 
 5. Upload the provided license file (.rli)
-
 ![enter image description here](https://i.imgur.com/Oso3cdj.png)
 
 6. Check your email for your license activation code.
-
 ![enter image description here](https://i.imgur.com/3BN9wpb.png)
 
 7. Secure your Classeur Management console with a password
-
 ![enter image description here](https://i.imgur.com/G5BkAmB.png)
 
 

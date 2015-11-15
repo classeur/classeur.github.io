@@ -30,7 +30,7 @@ Parameter | Description
 **fromRev** *Integer* | If provided, the result will contain the content of the specified revision and all the changes from the `fromRev` revision to the latest revision.
 **toRev** *Integer* | If provided, the result will only contain the changes from the `fromRev` revision to the `toRev` revision.
 
-> `user` or `admin` role is required if the file is not shared publicly.
+> **Note:** `user` or `admin` role is required if the file is not shared publicly.
 
 
 

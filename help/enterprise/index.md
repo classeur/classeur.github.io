@@ -36,7 +36,7 @@ Port | Service | Description
 1. SSH into your Linux server
 2. Run this install script
 
-	```bash
+	```
 	$ curl -sSL https://get.classeur.io | sudo sh
 	```
 

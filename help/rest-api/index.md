@@ -7,7 +7,7 @@ layout: help
 
 ## Authentication
 
-Files and folders are exposed via a simple REST API. The access may be restricted depending on the sharing preferences of the resource. For resources that requires a particular role, authentication is performed via [HTTP basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Provide your user ID as the username value and your API key as the password value.
+Files and folders are exposed via a simple REST API. Access to a resource may be restricted depending on its sharing preferences. For resources that requires a particular role, authentication is performed via [HTTP basic auth](https://en.wikipedia.org/wiki/Basic_access_authentication). Provide your user ID as the username value and your API key as the password value.
 
 Example:
 

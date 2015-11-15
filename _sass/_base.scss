@@ -44,7 +44,9 @@ td {
 }
 
 blockquote {
-    margin: 0;
+    padding-left: 2em;
+    margin-left: 0;
+    border-left: 5px solid #eee;
     color: rgba(0,0,0,0.4);
 }
 

@@ -50,4 +50,48 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for files that are not shared publicly.
 
 
+## Files
+
+
+### Retrieve a folder
+
+```
+GET /api/v1/folder/{folderId}
+```
+
+Parameter | Description
+--------: | ---
+**folderId** *String* | The folder ID.
+
+> **Note:** `user` or `admin` role is required for folders that are not shared publicly.
+
+
+### Retrieve folders metadata
+
+```
+GET /api/v1/metadata/folders?id=id1,id2...
+```
+
+Parameter | Description
+--------: | ---
+**id** *String* | A comma separated list of folder IDs.
+
+> **Note:** `user` or `admin` role is required for folders that are not shared publicly.
+
+
+## Users
+
+
+### Retrieve users metadata
+
+```
+GET /api/v1/metadata/users?id=id1,id2...
+```
+
+Parameter | Description
+--------: | ---
+**id** *String* | A comma separated list of user IDs.
+
+
+
 

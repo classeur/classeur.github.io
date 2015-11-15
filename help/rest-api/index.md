@@ -50,7 +50,7 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for files that are not shared publicly.
 
 
-## Files
+## Folders
 
 
 ### Retrieve a folder

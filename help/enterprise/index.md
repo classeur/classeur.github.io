@@ -3,10 +3,7 @@ layout: help
 
 ---
 
-# Enterprise
-
-
-## Prerequisites
+# Prerequisites
 
 
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
@@ -15,10 +12,10 @@ layout: help
 > For Amazon EC2, we recommend using the [Ubuntu Server 14.04 LTS AMI](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
 
 
-## Installation
+# Installation
 
 
-### Firewall and EC2 Security Group
+## Firewall and EC2 Security Group
 
 Classeur Enterprise requires specific ports to be open on the server. From the EC2 management console, create an entry for each port in the table below:
 
@@ -31,7 +28,7 @@ Port | Service | Description
 
 > For security reason, all other ports not listed here should be blocked.
 
-### Get started
+## Get started
 
 1. SSH into your Linux server
 2. Run this install script
@@ -42,15 +39,15 @@ Port | Service | Description
 
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.
 
-	![enter image description here](https://i.imgur.com/JFrIBD9.png)
+	![enter image description here](https://i.imgur.com/1I1pgAc.png)
 
 4. Upload a custom TLS/SSL cert/key or proceed with the provided self-signed pair.
 
-	![enter image description here](https://i.imgur.com/26QKbd2.png)
+	![enter image description here](https://i.imgur.com/b2APOvk.png)
 
 5. Upload the provided license file (.rli)
 
-	![enter image description here](https://i.imgur.com/Oso3cdj.png)
+	![enter image description here](https://i.imgur.com/pTHnGb6.png)
 
 6. Check your email for your license activation code.
 
@@ -58,8 +55,11 @@ Port | Service | Description
 
 7. Secure your Classeur Management console with a password
 
-	![enter image description here](https://i.imgur.com/G5BkAmB.png)
+	![enter image description here](https://i.imgur.com/dQXegMs.png)
 
 8. Configure your Classeur instance and click "Save"
+
+	![enter image description here](https://i.imgur.com/UkMRjPP.png)
+
 9. Visit the hostname you provided to access Classeur
 

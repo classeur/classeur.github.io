@@ -17,6 +17,6 @@ Classeur is a new app to write simple notes as well as technical documents and b
 
 - **Publish to the web.**
 
-	By linking Classeur with your blogs, you can easily publish and update your blog posts in one click. Classeur supports multiple blogging platforms: Blogger, Wordpress, GitHub.
+	By linking Classeur with your blogs, you can publish and update your blog posts in one click. Classeur supports multiple blogging platforms: Blogger, Wordpress, GitHub.
 
 

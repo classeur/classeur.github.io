@@ -93,5 +93,14 @@ Parameter | Description
 **id** *String* | A comma separated list of user IDs.
 
 
+### Retrieve all users
+
+```
+GET /api/v1/users
+```
+
+> **Note:** `admin` role is required.
+
+
 
 

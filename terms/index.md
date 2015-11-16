@@ -48,7 +48,7 @@ Violation of any of the terms below will result in the termination of your Accou
 
 Any questions about this document should be addressed to the support:
 
-support@classeur.io
+<support@classeur.io>
 
 This document was last updated on November 16, 2015.
 

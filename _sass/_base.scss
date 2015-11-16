@@ -24,57 +24,8 @@ body {
     box-sizing: border-box;
 }
 
-h2, h3, h4, h5, h6 {
-    margin: 1.3em 0;
-}
-
-h1 {
-    margin-bottom: 1.3em;
-}
-
-td, th {
-    padding: 8px;
-}
-
-td {
-    border-top: 1px solid rgba(0,0,0,0.05);
-    em {
-        display: block;
-    }
-}
-
-blockquote {
-    padding-left: 2em;
-    margin-left: 0;
-    border-left: 5px solid #eee;
-    color: rgba(0,0,0,0.4);
-}
-
 a {
     color: #316ED3;
-}
-
-img {
-    max-width: 100%;
-}
-
-code, kbd, pre, samp {
-    font-family: "Lucida Sans Typewriter",Monaco,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",monospace;
-    font-size: 0.91em;
-}
-
-code {
-    padding: 2px 4px;
-    background: rgba(0,0,0,0.04);
-    border-radius: 4px;
-    pre > & {
-        display: block;
-        overflow-x: auto;
-        padding: 0.5em;
-        background: rgba(0,0,0,0.04);
-        text-shadow: 0 1px white;
-        -webkit-text-size-adjust: none;
-    }
 }
 
 pre[class*=language-] {
@@ -139,7 +90,6 @@ pre[class*=language-] {
     }
 }
 
-
 .container {
     position: relative;
     max-width: 920px;
@@ -190,7 +140,7 @@ pre[class*=language-] {
             }
             text-decoration: none;
             &.small {
-                font-size: 0.8em;                
+                font-size: 0.8em;
                 padding: 2px;
                 padding-left: 24px;
             }
@@ -203,6 +153,58 @@ pre[class*=language-] {
 
 .right-column {
     padding-left: $left-column-width + 40;
+    .title {
+        font-size: 46px;
+        font-weight: 300;
+        margin: 6px 0 1.3em;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 1.3em 0;
+    }
+    td,
+    th {
+        padding: 8px;
+    }
+    td {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        em {
+            display: block;
+        }
+    }
+    blockquote {
+        padding-left: 2em;
+        margin-left: 0;
+        border-left: 5px solid rgba(0, 0, 0, 0.04);
+        color: rgba(0, 0, 0, 0.4);
+    }
+    img {
+        max-width: 100%;
+    }
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: "Lucida Sans Typewriter", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", monospace;
+        font-size: 0.91em;
+    }
+    code {
+        padding: 2px 4px;
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+    }
+    pre > code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: rgba(0, 0, 0, 0.03);
+        text-shadow: 0 1px white;
+        -webkit-text-size-adjust: none;
+    }
 }
 
 .footer {

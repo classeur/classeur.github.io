@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% capture pageTitle %}{% if page.title %}Help – {{ page.title }}{% else %}Help{% endif %}{% endcapture %}
 {% include head.html %}
 
 <body>
@@ -20,13 +21,14 @@
             <a class="btn" href="/help/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
         </div>
         <div class="right-column">
+            <div class="title">{{ page.title }}</div>
             {{ content }} {% include footer.html %}
         </div>
     </div>
     <script>
     var activeBtnElt = document.querySelector('.btn.active');
     if(activeBtnElt) {
-        var headerElts = Array.prototype.slice.call(document.querySelectorAll('h2,h3'));
+        var headerElts = Array.prototype.slice.call(document.querySelectorAll('h1,h2'));
         var headerContainer = document.createElement('div');
         headerContainer.className = 'headers';
         headerElts.forEach(function(elt) {
@@ -34,7 +36,7 @@
                 var headerElt = document.createElement('a');
                 headerElt.href = '#' + elt.id;
                 headerElt.textContent = elt.textContent;
-                if (elt.tagName === 'H2') {
+                if (elt.tagName === 'H1') {
                     headerElt.className = 'header';
                 } else {
                     headerElt.className = 'small header';

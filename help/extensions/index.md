@@ -88,7 +88,7 @@ To disable tables, set the property `ext:markdown:table` to `false`.
 
 ### Typographer
 
-The linkify extension enables some language-neutral replacement and quotes beautification.
+The typographer extension enables some language-neutral replacement and quotes beautification.
 
 To disable typographer, set the property `ext:markdown:typographer` to `false`.
 

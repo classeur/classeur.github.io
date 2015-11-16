@@ -1,11 +1,10 @@
 ---
 layout: help
+title: REST API
 
 ---
 
-# REST API
-
-## Authentication
+# Authentication
 
 Files and folders are exposed via a simple REST API. Access to a resource may be restricted depending on its sharing preference. For resources that requires a particular role, authentication is performed via [HTTP basic auth](https://en.wikipedia.org/wiki/Basic_access_authentication). Provide your user ID as the username value and your API key as the password value.
 
@@ -17,10 +16,10 @@ curl https://app.classeur.io/api/v1/files/F5QZgtHR1CCEgRN8p5Xc \
 ```
 
 
-## Files
+# Files
 
 
-### Retrieve a file
+## Retrieve a file
 
 ```
 GET /api/v1/files/{fileId}
@@ -37,7 +36,7 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for files that are not shared publicly.
 
 
-### Retrieve files metadata
+## Retrieve files metadata
 
 ```
 GET /api/v1/metadata/files?id=id1,id2...
@@ -50,10 +49,10 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for files that are not shared publicly.
 
 
-## Folders
+# Folders
 
 
-### Retrieve a folder
+## Retrieve a folder
 
 ```
 GET /api/v1/folder/{folderId}
@@ -66,7 +65,7 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for folders that are not shared publicly.
 
 
-### Retrieve folders metadata
+## Retrieve folders metadata
 
 ```
 GET /api/v1/metadata/folders?id=id1,id2...
@@ -79,10 +78,10 @@ Parameter | Description
 > **Note:** `user` or `admin` role is required for folders that are not shared publicly.
 
 
-## Users
+# Users
 
 
-### Retrieve users metadata
+## Retrieve users metadata
 
 ```
 GET /api/v1/metadata/users?id=id1,id2...
@@ -93,7 +92,7 @@ Parameter | Description
 **id** *String* | A comma separated list of user IDs.
 
 
-### Retrieve all users
+## Retrieve all users
 
 ```
 GET /api/v1/users

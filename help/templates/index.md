@@ -1,14 +1,13 @@
 ---
 layout: help
+title: Templates
 
 ---
-
-# Templates
 
 Classeur uses [Handlebars](http://handlebarsjs.com/), a Mustache compatible template engine, when exporting files to your disk or when publishing blog posts. Classeur lets you modify existing templates or create your own one, and have full control over the data you export.
 
 
-## File context
+# File context
 
 When processing a file, Handlebars receives the following context along with the template:
 
@@ -34,11 +33,11 @@ For example:
 - the expression `{% raw  %}{{{ file.content.html }}}{% endraw %}` will be replace by `<p>The content of your file</p>`.
 
 
-## Helpers
+# Helpers
 
 In addition to the default Handlebars helpers, Classeur adds its own ones.
 
-### toYaml
+## toYaml
 
 The `toYaml` helper allows you to convert an object into YAML. Typically, to generate a YAML front matter from your file properties, you can prefix your template with:
 
@@ -51,7 +50,7 @@ The `toYaml` helper allows you to convert an object into YAML. Typically, to gen
 {% endraw %}
 
 
-### Custom helpers
+## Custom helpers
 
 If you need more control, you can always create your own helpers in the settings. For example:
 

@@ -40,27 +40,27 @@ Port | Service | Description
 
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.
 
-	![enter image description here](https://i.imgur.com/1I1pgAc.png)
+	![enter image description here](https://i.imgur.com/XLvt2j4.png)
 
 4. Upload a custom TLS/SSL cert/key or proceed with the provided self-signed pair.
 
-	![enter image description here](https://i.imgur.com/b2APOvk.png)
+	![enter image description here](https://i.imgur.com/QsjMomW.png)
 
 5. Upload the provided license file (.rli)
 
-	![enter image description here](https://i.imgur.com/pTHnGb6.png)
+	![enter image description here](https://i.imgur.com/0QGLicj.png)
 
 6. Check your email for your license activation code.
 
-	![enter image description here](https://i.imgur.com/3BN9wpb.png)
+	![enter image description here](https://i.imgur.com/FBgMckL.png)
 
 7. Secure your Classeur Management console with a password
 
-	![enter image description here](https://i.imgur.com/dQXegMs.png)
+	![enter image description here](https://i.imgur.com/Ld90tiE.png)
 
 8. Configure your Classeur instance and click "Save"
 
-	![enter image description here](https://i.imgur.com/UkMRjPP.png)
+	![enter image description here](https://i.imgur.com/D7XetVw.png)
 
 9. Visit the hostname you provided to access Classeur
 

@@ -12,7 +12,7 @@ Classeur is a new platform to write simple notes as well as technical documents 
 
 - **Share your files, collaborate.**
 
-	Classeur makes it easy to share your files and your folders. With Classeur it's also possible to work on the same file at the same with your colleagues.
+	Classeur makes it easy to share your files and your folders. With Classeur it's also possible to work on the same file at the same time with your colleagues.
 
 - **Publish to the web.**
 

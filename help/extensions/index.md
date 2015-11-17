@@ -8,7 +8,7 @@ Extensions can be enabled/disabled via file properties. For example, to enable e
 
 ![enter image description here](https://i.imgur.com/v5WRILY.png)
 
-Also you can enable extensions by modifying the default properties in the settings.
+You can also enable/disable extensions by modifying the default properties in the settings.
 
 # Markdown
 

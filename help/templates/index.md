@@ -30,7 +30,7 @@ When processing a file, Handlebars receives the following context along with the
 For example:
 
 - the expression `{%raw%}{{file.name}}{%endraw%}` will be replaced by `The filename` (HTML-escaped),
-- the expression `{%raw%}{{{file.content.html}}}{%endraw%}` will be replace by `<p>The content of your file</p>`.
+- the expression `{%raw%}{{{file.content.html}}}{%endraw%}` will be replaced by `<p>The content of your file</p>`.
 
 
 # Helpers

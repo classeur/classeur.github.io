@@ -4,7 +4,7 @@ title: Help
 
 ---
 
-Classeur is a new app to write simple notes as well as technical documents and blogs. Here are a few things Classeur will help you with:
+Classeur is a new platform to write simple notes as well as technical documents and blogs. Here are a few things Classeur will help you with:
 
 - **Write in Markdown.**
 

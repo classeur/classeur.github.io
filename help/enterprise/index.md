@@ -35,10 +35,16 @@ Port | Service | Description
 ## Get started
 
 1. SSH into your Linux server
-2. Run this install script
+2. Run this install script:
 
 	```
 	$ curl -sSL https://get.classeur.io | sudo sh
+	```
+
+	> To install Classeur behind a proxy, use the following command:
+
+	```
+	$ curl -sSL -x http://<proxy>:<port> -o /tmp/install.sh https://get.classeur.io && sudo sh /tmp/install.sh http-proxy=http://<proxy>:<port>
 	```
 
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.

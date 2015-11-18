@@ -8,9 +8,12 @@ title: Enterprise
 
 
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
+
+	> For Amazon EC2, we recommend using the [Ubuntu Server 14.04 LTS AMI](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
+	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
 
-> For Amazon EC2, we recommend using the [Ubuntu Server 14.04 LTS AMI](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
+	> Pricing starts at $1,800 per year (10 users license).
 
 
 # Installation

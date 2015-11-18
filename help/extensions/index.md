@@ -103,7 +103,7 @@ To disable table of contents, set the property `ext:markdown:toc` to `false`.
 
 The MathJax extension is enabled by default. The TeX delimiters are [those used by pandoc](http://pandoc.org/README.html#math).
 
-To configure MathJax, you can specify JSON values for properties `ext:mathjax:tex` and `ext:mathjax:tex2jax`.
+To configure MathJax, you can specify JSON values as properties `ext:mathjax:tex` and `ext:mathjax:tex2jax`.
 To disable MathJax, set the property `ext:mathjax` to `false`.
 
 

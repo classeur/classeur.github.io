@@ -42,7 +42,7 @@ Port | Service | Description
 	```
 
 	> To install Classeur behind a proxy, use the following command:
-
+	
 	```
 	$ curl -sSL -x http://<proxy>:<port> -o /tmp/install.sh https://get.classeur.io && sudo sh /tmp/install.sh http-proxy=http://<proxy>:<port>
 	```

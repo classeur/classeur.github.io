@@ -1,6 +1,6 @@
 # Site settings
 title: >
-  Classeur – Re-enjoy writing, with Markdown
+  Re-enjoy writing, with Markdown
 description: > # this means to ignore newlines until "baseurl:"
   Start writing notes, docs, blogs easily and quickly using Markdown.
 baseurl: "" # the subpath of your site, e.g. /blog/

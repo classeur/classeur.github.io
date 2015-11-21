@@ -55,7 +55,7 @@ Parameter | Description
 ## Retrieve a folder
 
 ```
-GET /api/v1/folder/{folderId}
+GET /api/v1/folders/{folderId}
 ```
 
 Parameter | Description

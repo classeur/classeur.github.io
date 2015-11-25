@@ -30,7 +30,7 @@
 
     function scrollToAnchor(anchor) {
         var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0;
-        scrollTop += document.getElementById(anchor).getBoundingClientRect().top - navbarElt.offsetHeight - 30;
+        scrollTop += document.getElementById(anchor).getBoundingClientRect().top - navbarElt.offsetHeight - 40;
         document.body.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start();
         htmlElt.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start();
     }
@@ -69,7 +69,7 @@
 
     function onScroll() {
         var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0;
-        navbarElt.classList.toggle('shadow', scrollTop > 10);
+        navbarElt.classList.toggle('md-whiteframe-z1', scrollTop > 10);
         var threshold = window.innerHeight - 80;
         optionElts.forEach(function(elt) {
             if (!elt.isShown && elt.getBoundingClientRect().top < threshold) {

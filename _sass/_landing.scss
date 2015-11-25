@@ -51,21 +51,24 @@ br {
 		top: 0;
 		width: 100%;
 		z-index: 2;
+        white-space: nowrap;
 		.logo {
-			margin: 5px 18px -5px 25px;
+			margin: 5px 20px -5px 30px;
 		}
 		.btn {
-			padding: 12px;
+			padding: 11px;
 		}
-        .social {
-    		margin: 26px 26px 0;
-    		@media (max-width: $large-width) {
-    			display: none;
-    		}
-    	}
-        &.md-whiteframe-z1 {
-            background-color: mix($body-background-color, #fff, 33%);
-        }
+		.social {
+			margin: 32px 32px 0;
+			font-size: 1.8em;
+			line-height: 1;
+			@media (max-width: $large-width) {
+				display: none;
+			}
+		}
+		&.md-whiteframe-z1 {
+			background-color: mix($body-background-color, #fff, 33%);
+		}
 	}
 	.wrapper-1 {
 		position: absolute;
@@ -357,14 +360,14 @@ $start-option-height-medium: 150px;
 		margin: 30px auto;
 		width: 400px;
 		text-align: center;
-        color: rgba(0, 0, 0, 0.5);
+		color: rgba(0, 0, 0, 0.5);
 		.btn {
-            color: rgb(33,150,243);
+			color: rgb(33,150,243);
 			display: block;
 			line-height: 1.8;
 			.icon {
 				font-size: 50px;
-                line-height: 1;
+				line-height: 1;
 			}
 		}
 	}

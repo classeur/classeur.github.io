@@ -30,8 +30,8 @@ GET /api/v1/files/{fileId}/fromRev/{fromRev}/toRev/{toRev}
 Parameter | Description
 --------: | ---
 **fileId** *String* | The file ID.
-**fromRev** *Integer* | If provided, the result will contain the content of the `fromRev` revision and all the changes from the `fromRev` revision to the latest revision.
-**toRev** *Integer* | If provided, the result will only contain the changes from the `fromRev` revision to the `toRev` revision.
+**fromRev** *Integer* | If provided, the result will contain the content of revision `fromRev` and all the changes from revision `fromRev` to the latest revision.
+**toRev** *Integer* | If provided, the result will only contain the changes from revision `fromRev` to revision `toRev`.
 
 > **Note:** `user` or `admin` role is required for files that are not shared publicly.
 

@@ -46,36 +46,27 @@ br {
     background: url(../img/landing-bg.jpg) no-repeat center center;
     background-size: cover;
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .14), 0 6px 10px 0 rgba(0, 0, 0, .098), 0 1px 18px 0 rgba(0, 0, 0, .084);
-    .header {
-        position: absolute;
+    .navbar {
+        position: fixed;
+        top: 0;
         width: 100%;
-        border: 0;
-        background-color: transparent;
+        z-index: 2;
+        background-color: $body-background-color;
         .logo {
-            margin: 5px 25px 0;
+            margin: 5px 15px -4px 25px;
+        }
+        .btn {
+            padding: 12px;
+        }
+        &.shadow {
+            box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.14),0px 2px 2px 0px rgba(0,0,0,0.098),0px 1px 5px 0px rgba(0,0,0,0.084);
         }
     }
     .social {
-        margin: 25px;
+        margin: 25px 25px 0;
         font-size: 1.8em;
-        @media (max-width: $small-width) {
+        @media (max-width: $large-width) {
             display: none;
-        }
-    }
-    .start.btn {
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        width: 200px;
-        bottom: 10px;
-        padding: 0;
-        font-size: 54px;
-        color: rgb(33, 150, 243);
-        line-height: 36px;
-        .icon {
-            display: inline-block;
-            -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
         }
     }
     .wrapper-1 {
@@ -208,6 +199,112 @@ $start-option-height-medium: 150px;
             box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .14), 0 4px 5px 0 rgba(0, 0, 0, .098), 0 1px 10px 0 rgba(0, 0, 0, .084);
             margin-bottom: 15px;
             border-radius: 3px;
+        }
+    }
+    [flex] {
+        box-sizing: border-box;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+    .flex-column {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        &.center {
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+    @media (min-width: $large-width) {
+        .perspective.flex-column {
+            perspective: 1000px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        .plan.item {
+        }
+    }
+    .plan.item {
+        position: relative;
+        background-color: #fbfbfb;
+        margin: 0 -8px 60px;
+        height: 520px;
+        text-align: center;
+        padding: 0 10px 10px;
+        border-radius: 3px;
+        box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.14),0px 2px 2px 0px rgba(0,0,0,0.098),0px 1px 5px 0px rgba(0,0,0,0.084);
+        .header {
+            color: #fff;
+            height: 175px;
+        }
+        .body {
+            padding-top: 20px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .name {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 44px;
+            line-height: 1;
+        }
+        &.standard {
+            transform: rotateY(8deg);
+            background-color: #c8c8c8 !important;
+        }
+        &.enterprise {
+            transform: rotateY(-8deg);
+            font-size: 14px;
+            background-color: #e5cf95 !important;
+            .name {
+                margin-bottom: 10px;
+            }
+            .price {
+                font-size: 36px;
+            }
+        }
+        &.premium {
+            z-index: 1;
+            height: 550px;
+            margin-top: -15px;
+            background-color: #95c4e3 !important;
+            box-shadow: 0 2px 4px -1px rgba(0,0,0,0.14),0 4px 5px 0 rgba(0,0,0,0.098),0 1px 10px 0 rgba(0,0,0,0.084);
+            .header {
+                height: 190px;
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            font-size: 14px;
+            padding: 8px 12px;
+            list-style-type: none;
+            line-height: 1.3;
+        }
+        .btn {
+            font-size: 22px;
+            padding: 10px 15px;
+            margin: 15px;
+            display: block;
         }
     }
     .start.option {

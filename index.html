@@ -2,9 +2,12 @@
 layout: default
 ---
 <div class="splash">
-    <div class="header hidden">
-        <img class="logo" src="img/logo.png" height="60">
+    <div class="navbar hidden">
+        <img class="logo" src="img/logo.png" height="50">
         </img>
+        <a class="btn" href="#features">Features</a>
+        <a class="btn" href="#pricing">Pricing</a>
+        <a class="btn" href="#start">Get started</a>
         {% include social.html %}
     </div>
     <div class="wrapper-1 hidden">
@@ -22,13 +25,10 @@ layout: default
             </div>
         </div>
     </div>
-    <a class="start btn hidden" href="#page">
-        <div class="icon icon-arrow-forward"></div>
-    </a>
 </div>
 <div id="page" class="page">
     <div class="container">
-        <div class="heading1">
+        <div class="heading1" id="features">
             Start writing
             <br>notes, docs, blogs
             <br>quickly using Markdown.
@@ -57,6 +57,83 @@ layout: default
                     <img width="320" height="320" src="img/blog.png">
                 </div>
                 ...and publish.
+            </div>
+        </div>
+        <div class="heading1" id="pricing">
+            Pricing
+        </div>
+        <div class="perspective flex-column center">
+            <div flex="" class="standard plan item md-whiteframe-z1 plastic-4 flex-column">
+                <div class="header flex-column center">
+                    <div class="name">
+                        Standard
+                    </div>
+                    <div class="price">
+                        Free
+                    </div>
+                </div>
+                <div class="body flex-column" flex="">
+                    <ul flex="">
+                        <li>Unlimited files and folders</li>
+                        <li>Share publicly</li>
+                        <li>1 blog</li>
+                        <li>Unlimited blog posts</li>
+                        <li>Export to PDF, Word, EPUB... (5KB content limit)</li>
+                        <li><a target="_blank" href="http://classeur.io/help/rest-api/">REST API</a> (read only)</li>
+                    </ul>
+                    <a class="btn" href="#start">Get started</a>
+                </div>
+            </div>
+            <div flex="" class="premium plan item md-whiteframe-z2 plastic-0 flex-column">
+                <div class="header flex-column center">
+                    <div class="name">
+                        Premium
+                    </div>
+                    <div class="price">
+                        $5
+                    </div>
+                    <div>
+                        per month
+                    </div>
+                </div>
+                <div class="body flex-column" flex="">
+                    <ul flex="">
+                        <li>Unlimited files and folders</li>
+                        <li>Share publicly</li>
+                        <li><b>Real-time collaboration</b></li>
+                        <li><b>Unlimited blogs and posts</b></li>
+                        <li>Export to PDF, Word, EPUB... <b>(no content limit)</b></li>
+                        <li><a target="_blank" href="http://classeur.io/help/rest-api/">REST API</a> (read/write coming soon)</li>
+                    </ul>
+                    <a class="btn" href="#start">Get started</a>
+                </div>
+            </div>
+            <div flex="" class="enterprise plan item md-whiteframe-z1 plastic-1 flex-column">
+                <div class="header flex-column center">
+                    <div class="name">
+                        Enterprise
+                    </div>
+                    <div>
+                        starting at
+                    </div>
+                    <div class="price">
+                        $1,800
+                    </div>
+                    <div>
+                        per year
+                    </div>
+                </div>
+                <div class="body flex-column" flex="">
+                    <ul flex="">
+                        <li><b>On premise or cloud deployment</b></li>
+                        <li><b>Google Apps or LDAP/AD login</b></li>
+                        <li><b>Internal or external DB</b></li>
+                        <li><b>Automatic backup</b></li>
+                        <li><b>Admin console</b></li>
+                        <li><b>Support</b></li>
+                    </ul>
+                    <a class="btn" target="_blank" href="http://classeur.io/help/enterprise/">Get started</a>
+                </div>
             </div>
         </div>
     </div>

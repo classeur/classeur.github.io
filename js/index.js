@@ -19,19 +19,28 @@
         }
     });
 
+    var htmlElt = document.querySelector('html');
     var splashElt = document.querySelector('.splash');
     var pageElt = document.querySelector('.page');
-    var headerElt = document.querySelector('.header');
+    var navbarElt = document.querySelector('.navbar');
     var wrapperElt = document.querySelector('.wrapper-1');
     var scrollerElt = document.querySelector('.scroller');
-    var startBtnElt = document.querySelector('.start.btn');
     var optionElts = Array.prototype.slice.call(document.querySelectorAll('.option'));
     var socialBtns = Array.prototype.slice.call(document.querySelectorAll('.social a'));
 
-    startBtnElt.addEventListener('click', function(evt) {
-        evt.preventDefault();
-        document.body.clanim.scrollTop(window.innerHeight).duration(800).easing('materialOut').start();
-        document.querySelector('html').clanim.scrollTop(window.innerHeight).duration(800).easing('materialOut').start();
+    function scrollToAnchor(anchor) {
+        var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0;
+        scrollTop += document.getElementById(anchor).getBoundingClientRect().top - navbarElt.offsetHeight - 30;
+        document.body.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start();
+        htmlElt.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start();
+    }
+
+    ['features', 'pricing', 'start'].forEach(function(anchor) {
+        Array.prototype.slice.call(document.querySelectorAll('[href="#' + anchor + '"]')).forEach(function(elt) {
+            elt.addEventListener('click', function() {
+                scrollToAnchor(anchor);
+            });
+        });
     });
 
     var wrapperY = 1200;
@@ -59,6 +68,8 @@
     window.addEventListener('resize', onResize);
 
     function onScroll() {
+        var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0;
+        navbarElt.classList.toggle('shadow', scrollTop > 10);
         var threshold = window.innerHeight - 80;
         optionElts.forEach(function(elt) {
             if (!elt.isShown && elt.getBoundingClientRect().top < threshold) {
@@ -69,8 +80,7 @@
     }
     window.addEventListener('scroll', onScroll);
 
-    headerElt.clanim.opacity(0).start().classList.remove('hidden');
-    startBtnElt.clanim.opacity(0).translateX(-startBtnElt.offsetWidth / 2).translateY(-20).start().classList.remove('hidden');
+    navbarElt.clanim.opacity(0).start().classList.remove('hidden');
     optionElts.forEach(function(elt) {
         elt.clanim.opacity(0).translateY(40).start().classList.remove('hidden');
     });
@@ -96,14 +106,13 @@
     onScroll();
 
     setTimeout(function() {
-        headerElt.clanim.opacity(1).duration(600).easing('materialOut').start(true);
+        navbarElt.clanim.opacity(1).duration(600).easing('materialOut').start(true);
         setTimeout(function() {
             wrapperY = 0;
             wrapperElt.clanim.scale(wrapperRatio).translateY(wrapperY).duration(500).easing('outBack').start(true).classList.remove('hidden');
             setTimeout(function() {
-                startBtnElt.clanim.opacity(1).translateY(0).duration(1000).easing('materialOut').start(true);
                 editor.setSelection(editorContent.length, editorContent.length);
-            }, 1000);
+            }, 500);
         }, 500);
     }, 500);
 })();

@@ -1,0 +1,22 @@
+{
+  "name": "clsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classeur/classeur.github.io.git"
+  },
+  "author": "Benoit Schweblin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classeur/classeur.github.io/issues"
+  },
+  "homepage": "https://github.com/classeur/classeur.github.io#readme",
+  "devDependencies": {
+    "eslint-config-classeur": "^1.0.1"
+  }
+}

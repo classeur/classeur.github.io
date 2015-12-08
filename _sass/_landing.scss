@@ -58,6 +58,9 @@ br {
 			padding: 11px;
 		}
 		.social {
+			position: absolute;
+			top: 0;
+			right: 0;
 			margin: 32px 32px 0;
 			line-height: 1;
 			@media (max-width: $large-width) {

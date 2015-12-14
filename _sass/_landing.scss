@@ -68,7 +68,7 @@ br {
 			}
 		}
 		&.md-whiteframe-z1 {
-			background-color: mix($body-background-color, #fff, 33%);
+			background-color: mix($body-background-color, #fff, 20%);
 		}
 	}
 	.wrapper-1 {
@@ -385,9 +385,9 @@ $start-option-height-medium: 150px;
 		width: 400px;
 		text-align: center;
 	}
-	.users {
-		max-width: 600px;
-		font-size: 20px;
+	.testimonials {
+		max-width: 560px;
+		font-size: 18px;
 		margin: auto;
 		* {
 			line-height: 1.5;

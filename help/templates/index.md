@@ -13,24 +13,39 @@ When processing a file, Handlebars receives the following context along with the
 
 ```javascript
 {
-	"file": {
-		"name": "The filename",
-		"content": {
-			"properties": {
-				"key1": "value1",
-				"key2": "value2"
-			},
-			"text": "The content of your file",
-			"html": "<p>The content of your file</p>"
-		}
-	}
+  "file": {
+    "name": "The filename",
+    "content": {
+      "properties": {
+        "key1": "value1",
+        "key2": "value2"
+      },
+      "text": "The content of your file",
+      "html": "<p>The content of your file</p>"
+    }
+  }
 }
 ```
 
-For example:
+So, for example, the following template:
 
-- the expression `{%raw%}{{file.name}}{%endraw%}` will be replaced by `The filename` (HTML-escaped),
-- the expression `{%raw%}{{{file.content.html}}}{%endraw%}` will be replaced by `<p>The content of your file</p>`.
+```
+<html>
+<head>
+<title>{{file.name}}</title>
+<body>{{{file.content.html}}}</body>
+</html>
+```
+
+will be transformed by the template engine into:
+
+```
+<html>
+<head>
+<title>The filename</title>
+<body><p>The content of your file</p></body>
+</html>
+```
 
 
 # Helpers

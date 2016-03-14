@@ -29,13 +29,15 @@ When processing a file, Handlebars receives the following context along with the
 
 So, for example, the following template:
 
+{% raw %}
 ```
 <html>
 <head>
-<title>{% raw %}{{file.name}}{% endraw %}</title>
-<body>{% raw %}{{{file.content.html}}}{% endraw %}</body>
+<title>{{file.name}}</title>
+<body>{{{file.content.html}}}</body>
 </html>
 ```
+{% endraw %}
 
 will be transformed by the template engine into:
 
@@ -70,12 +72,12 @@ The `toYaml` helper allows you to convert an object into YAML. Typically, to gen
 If you need more control, you can always create your own helpers in the settings. For example:
 
 ```javascript
-Handlebars.registerHelper('transform', function(options) {
-    var result = options.fn(this);
-    return new Handlebars.SafeString(
-        result.replace(/<pre[^>]*>/g, '<pre class="prettyprint">')
-    );
-});
+Handlebars.registerHelper('transform', function (options) {
+  var result = options.fn(this)
+  return new Handlebars.SafeString(
+    result.replace(/<pre[^>]*>/g, '<pre class="prettyprint">')
+  )
+})
 ```
 
 

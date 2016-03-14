@@ -115,11 +115,10 @@ GET /api/v2/users/me
 ## Delete a user
 
 ```
-GET /api/v2/users/:userId
-GET /api/v2/users/me
+DELETE /api/v2/users/:userId
 ```
 
-> Owner and admin only.
+> Admin only.
 
 
 

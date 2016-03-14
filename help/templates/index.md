@@ -32,8 +32,8 @@ So, for example, the following template:
 ```
 <html>
 <head>
-<title>{{file.name}}</title>
-<body>{{{file.content.html}}}</body>
+<title>{% raw %}{{file.name}}{% endraw %}</title>
+<body>{% raw %}{{{file.content.html}}}{% endraw %}</body>
 </html>
 ```
 

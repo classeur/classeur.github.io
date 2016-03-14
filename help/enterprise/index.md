@@ -13,7 +13,6 @@ title: Enterprise
 	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
 
-	> Pricing starts at $1,800 per year (10 users license).
 
 
 # Installation
@@ -71,5 +70,9 @@ Port | Service | Description
 
 	![enter image description here](https://i.imgur.com/D7XetVw.png)
 
-9. Visit the hostname you provided to access Classeur
+9. Visit the following URL to manage users and roles (using the system key specified in the settings page)
+
+	```
+	https://HOSTNAME/#!/users?sysKey=SYSTEM_KEY
+	``` 
 

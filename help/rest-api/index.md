@@ -36,13 +36,13 @@ Requests that return multiple items will be limited to 20 items by default. For 
 Specify a range of items to retrieve using the `range` header with unit `items`. For example, to retrieve page #2:
 
 ```
-Range: items=30-59
+Range: items=20-39
 ```
 
 To retrieve the last page:
 
 ```
-Range: items=-30
+Range: items=-20
 ```
 
 ## Conditional updates

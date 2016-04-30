@@ -518,7 +518,6 @@ DELETE /api/v2/files/:fileId
 ```
 {
   "comments": {},
-  "conflicts": {},
   "discussions": {},
   "properties": {
     "key": "value"
@@ -533,7 +532,6 @@ DELETE /api/v2/files/:fileId
 |Name         |Type     |Description                              |
 |-------------|---------|-----------------------------------------|
 |`comments`   |`object` |An object containing discussion comments.|
-|`conflicts`  |`object` |An object containing conflicts.          |
 |`discussions`|`object` |An object containing discussions.        |
 |`properties` |`object` |An object containing properties.         |
 |`rev`        |`integer`|The revision number.                     |
@@ -576,7 +574,6 @@ PATCH /api/v2/files/:fileId/contentRevs/:rev
 ```
 {
   "comments": [],
-  "conflicts": [],
   "created": 1453552264623,
   "discussions": [],
   "properties": [],
@@ -591,7 +588,6 @@ PATCH /api/v2/files/:fileId/contentRevs/:rev
 |Name         |Type       |Description                                    |
 |-------------|-----------|-----------------------------------------------|
 |`comments`   |`array`    |A list of discussion comment changes. Optional.|
-|`conflicts`  |`array`    |A list of conflict changes. Optional.          |
 |`created`    |`timestamp`|The date the change was made.                  |
 |`discussions`|`array`    |A list of discussion changes. Optional.        |
 |`properties` |`array`    |A list of property changes. Optional.          |
@@ -600,7 +596,7 @@ PATCH /api/v2/files/:fileId/contentRevs/:rev
 |`userId`     |`string`   |The ID of the user who made the change.        |
 
 > A list of changes consists of objects containing:
->  - `k`, the key that has changed, for objects like `comments`, `conflicts`, `discussions` and `properties`, or `o`, the offset of the change, for `text`.
+>  - `k`, the key that has changed, for objects like `comments`, `discussions` and `properties`, or `o`, the offset of the change, for `text`.
 >  - `a`, the added value/text, or `d`, the deleted value/text.
 
 

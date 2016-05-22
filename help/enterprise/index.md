@@ -40,12 +40,6 @@ Port | Service | Description
 	$ curl -sSL https://get.classeur.io | sudo sh
 	```
 
-	> To install Classeur behind a proxy, use the following command:
-	
-	```
-	$ curl -sSL -x http://<proxy>:<port> -o /tmp/install.sh https://get.classeur.io && sudo sh /tmp/install.sh http-proxy=http://<proxy>:<port>
-	```
-
 3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.
 
 	![enter image description here](https://i.imgur.com/XLvt2j4.png)

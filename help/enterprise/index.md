@@ -67,6 +67,6 @@ Port | Service | Description
 9. Visit the following URL to manage users and roles (using the system key specified in the settings page)
 
 	```
-	https://HOSTNAME/#!/users?syskey=SYSTEM_KEY
+	https://HOSTNAME/#!/users?sysKey=SYSTEM_KEY
 	``` 
 

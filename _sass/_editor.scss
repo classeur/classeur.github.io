@@ -1,22 +1,23 @@
 .scroller {
-  position: absolute;
-  top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
   overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .content {
   color: rgba(0, 0, 0, 0.73);
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  width: 800px;
+  letter-spacing: 0;
   margin: 0 auto;
   padding: 50px 100px 200px;
-  font-family: 'Roboto', sans-serif;
   white-space: pre-wrap;
-  word-wrap: break-word;
+  width: 800px;
   word-break: normal;
+  word-wrap: break-word;
 }
 
 * {
@@ -49,9 +50,9 @@ pre:focus {
 
 .tag {
   color: #555;
-  font-weight: 500;
   font-family: 'Source Code Pro', monospace;
   font-size: 1em;
+  font-weight: 500;
 }
 
 .tag .punctuation,
@@ -66,10 +67,10 @@ pre:focus {
 }
 
 .entity {
-  font-style: italic;
+  color: #555;
   font-family: 'Source Code Pro', monospace;
   font-size: 1em;
-  color: #555;
+  font-style: italic;
 }
 
 .table {
@@ -182,15 +183,15 @@ pre:focus {
 .fn,
 .inlinefn,
 .sup {
+  font-size: smaller;
   position: relative;
   top: -0.5em;
-  font-size: smaller;
 }
 
 .sub {
-  position: relative;
   bottom: -0.25em;
   font-size: smaller;
+  position: relative;
 }
 
 .img {

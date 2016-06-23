@@ -2,25 +2,26 @@
 layout: default
 ---
 
+<div class="navbar">
+  <div class="logo"></div>
+  {% include social.html %}
+  <a class="btn" href="https://app.classeur.io">Start</a>
+</div>
 <div class="splash md-whiteframe-z3">
-  <div class="navbar hidden">
-    <img class="logo" src="img/logo.png" height="55" width="160"/>
-    <a class="btn" href="#features">Features</a>
-    <a class="btn" href="#pricing">Pricing</a>
-    <a class="btn" href="#start">Get started</a> {% include social.html %}
-  </div>
-  <div class="wrapper-1 hidden">
-    <div class="wrapper-2 md-whiteframe-z5">
-      <div class="wrapper-3 md-whiteframe-z1">
-        <div class="margin"></div>
-        <div class="pen"></div>
-        <div class="scroller">
-          <pre class="content"></pre>
+  <div class="background">
+    <div class="wrapper-1">
+      <div class="wrapper-2 md-whiteframe-z5">
+        <div class="wrapper-3 md-whiteframe-z1">
+          <div class="margin"></div>
+          <div class="pen"></div>
+          <div class="scroller">
+            <pre class="content"></pre>
+          </div>
         </div>
-      </div>
-      <div class="hole hole-1 md-whiteframe-z2"></div>
-      <div class="hole hole-2 md-whiteframe-z2"></div>
-      <div class="tab">
+        <div class="hole hole-1 md-whiteframe-z2"></div>
+        <div class="hole hole-2 md-whiteframe-z2"></div>
+        <div class="tab">
+        </div>
       </div>
     </div>
   </div>
@@ -28,48 +29,51 @@ layout: default
 <div id="page" class="page">
   <div class="container">
     <div class="heading1" id="features">
-      Start writing
-      <br>notes, docs, blogs
-      <br>quickly using Markdown.
+      Features
     </div>
     <div class="tile-container">
-      <div class="tile option hidden">
+      <div class="tile option">
         <div>
-          <img class="md-whiteframe-z1" width="320" height="320" src="img/explorer.png">
+          <img class="md-whiteframe-z1" width="200" height="200" src="img/editor.gif">
         </div>
-        Intuitive design.
+        <h3>First-class editor</h3>
+        <p>Classeur embedds a full-featured Markdown editor that supports spell-checking, syntax highlighting, side preview and scroll sync.</p> 
       </div>
-      <div class="tile option hidden">
+      <div class="tile option">
         <div>
-          <img class="md-whiteframe-z1" width="320" height="320" src="img/editor.gif">
+          <img class="md-whiteframe-z1" width="200" height="200" src="img/collaborate.gif">
         </div>
-        First-class editor.
+        <h3>Share, collaborate...</h3>
+        <p>Classeur integrates powerful tools to work with your team, including sharing, real-time collaboration, inline comments and file history.</p> 
       </div>
-      <div class="tile option hidden">
+      <div class="tile option">
         <div>
-          <img class="md-whiteframe-z1" width="320" height="320" src="img/collaborate.gif">
+          <img class="md-whiteframe-z1" width="200" height="200" src="img/blog.png">
         </div>
-        Share, collaborate...
-      </div>
-      <div class="tile option hidden">
-        <div>
-          <img class="md-whiteframe-z1" width="320" height="320" src="img/blog.png">
-        </div>
-        ...and publish.
+        <h3>...and publish</h3>
+        <p>Classeur connects to your blogs and enables you to publish your files to different platforms like WordPress, Blogger, GitHub or Zendesk.</p>
       </div>
     </div>
   </div>
-  <div class="light md-whiteframe-z4" id="testimonials">
+  <div class="light md-whiteframe-z4 tile-container" id="testimonials">
     <div class="container">
       <div class="heading1">
         They use Classeur
       </div>
-      <div class="testimonials">
+      <div class="testimonial">
         <blockquote>
           We used to fight with Jive on things like formatting. When using Classeur it feels like how writing should be. Classeur has had a huge impact on the way we collaborate and publish our content.
         </blockquote>
         <p>
           <img src="img/grant_miller.jpg"> <b>Grant Miller</b>, replicated.com
+        </p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          Can’t praise classeur.io enough! A masterpiece of pleasing design and functionality if you ask me.
+        </blockquote>
+        <p>
+          <img src="img/arindam_basu.jpg"> <b>Arindam Basu</b>, teacher
         </p>
       </div>
     </div>
@@ -102,7 +106,7 @@ layout: default
           <a class="btn" href="#start">Get started</a>
         </div>
       </div>
-      <div flex="" class="premium plan item md-whiteframe-z5 plastic-0 flex-column">
+      <div flex="" class="premium plan item md-whiteframe-z3 plastic-0 flex-column">
         <div class="header flex-column center">
           <div class="name">
             Premium
@@ -164,7 +168,7 @@ layout: default
     <div class="heading1" id="start">
       Start now!
     </div>
-    <a class="start option browser hidden" href="https://app.classeur.io">
+    <a class="start option browser" href="https://app.classeur.io">
       <div class="icon icon-open-in-browser">
       </div>
       <div class="text">
@@ -172,7 +176,7 @@ layout: default
         <div class="small">in the browser</div>
       </div>
     </a>
-    <a class="start option osx hidden no-display" href="http://download.classeur.io/download/osx">
+    <a class="start option osx no-display" href="http://download.classeur.io/download/osx">
       <div class="icon icon-desktop-mac">
       </div>
       <div class="text">
@@ -180,7 +184,7 @@ layout: default
         <div class="small">for Mac OS X</div>
       </div>
     </a>
-    <a class="start option windows hidden no-display" onclick="alert('Coming shortly!')">
+    <a class="start option windows no-display" onclick="alert('Coming shortly!')">
       <div class="icon icon-desktop-windows">
       </div>
       <div class="text">
@@ -188,7 +192,7 @@ layout: default
         <div class="small">for Windows</div>
       </div>
     </a>
-    <a class="start option linux hidden no-display" onclick="alert('Coming shortly!')">
+    <a class="start option linux no-display" onclick="alert('Coming shortly!')">
       <div class="icon icon-laptop">
       </div>
       <div class="text">
@@ -196,7 +200,7 @@ layout: default
         <div class="small">for Linux</div>
       </div>
     </a>
-    <a class="start option chrome hidden no-display" href="https://chrome.google.com/webstore/detail/classeur/fkpffpbnlbpdhnommmbeookgmomeccid">
+    <a class="start option chrome no-display" href="https://chrome.google.com/webstore/detail/classeur/fkpffpbnlbpdhnommmbeookgmomeccid">
       <div class="icon icon-laptop-mac">
       </div>
       <div class="text">
@@ -204,7 +208,7 @@ layout: default
         <div class="small">for Chrome</div>
       </div>
     </a>
-    <a class="start option firefox hidden no-display" href="https://marketplace.firefox.com/app/classeur/">
+    <a class="start option firefox no-display" href="https://marketplace.firefox.com/app/classeur/">
       <div class="icon icon-laptop">
       </div>
       <div class="text">

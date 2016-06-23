@@ -1,118 +1,106 @@
-(function() {
-	window.BezierEasing.css.materialOut = window.BezierEasing(0.25, 0.8, 0.25, 1.0)
-	window.BezierEasing.css.outBack = window.BezierEasing(0.175, 0.885, 0.320, 1.125)
-	var editorContent = '> Re-enjoy writing, with *Markdown*.\n'
-	var editor = window.cledit(
-		document.querySelector('.content'),
-		document.querySelector('.scroller')
-	)
-	var grammar = window.mdGrammar({
-		fcbs: true,
-		tables: true,
-		strikes: true
-	})
-	editor.init({
-		content: editorContent,
-		sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+',
-		highlighter: function(text) {
-			return window.Prism.highlight(text, grammar)
-		}
-	})
+;(function () {
+  window.BezierEasing.css.materialOut = window.BezierEasing(0.25, 0.8, 0.25, 1.0)
+  window.BezierEasing.css.outBack = window.BezierEasing(0.175, 0.885, 0.320, 1.125)
+  var editorContent = '> Re-enjoy writing, with *Markdown*.\n'
+  var editor = window.cledit(
+    document.querySelector('.content'),
+    document.querySelector('.scroller')
+  )
+  var grammar = window.mdGrammar({
+    fcbs: true,
+    tables: true,
+    strikes: true
+  })
+  editor.init({
+    content: editorContent,
+    sectionDelimiter: '^.+[ \\t]*\\n=+[ \\t]*\\n+|^.+[ \\t]*\\n-+[ \\t]*\\n+|^\\#{1,6}[ \\t]*.+?[ \\t]*\\#*\\n+',
+    highlighter: function (text) {
+      return window.Prism.highlight(text, grammar)
+    }
+  })
 
-	var htmlElt = document.querySelector('html')
-	var splashElt = document.querySelector('.splash')
-	var pageElt = document.querySelector('.page')
-	var navbarElt = document.querySelector('.navbar')
-	var wrapperElt = document.querySelector('.wrapper-1')
-	var scrollerElt = document.querySelector('.scroller')
-	var optionElts = Array.prototype.slice.call(document.querySelectorAll('.option'))
-	var socialBtns = Array.prototype.slice.call(document.querySelectorAll('.social a'))
+  var navbarElt = document.querySelector('.navbar')
+  var splashElt = document.querySelector('.splash')
+  var backgroundElt = splashElt.querySelector('.background')
+  var pageElt = document.querySelector('.page')
+  var wrapperElt = document.querySelector('.wrapper-1')
+  var scrollerElt = document.querySelector('.scroller')
+  // var optionElts = Array.prototype.slice.call(document.querySelectorAll('.option'))
+  var socialBtns = Array.prototype.slice.call(document.querySelectorAll('.social a'))
 
-	function scrollToAnchor(anchor) {
-		var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0
-		scrollTop += document.getElementById(anchor).getBoundingClientRect().top - navbarElt.offsetHeight - 40
-		document.body.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start()
-		htmlElt.clanim.scrollTop(scrollTop).duration(800).easing('materialOut').start()
-	}
+  var wrapperY = 1200
 
-	['features', 'pricing', 'start'].forEach(function(anchor) {
-		Array.prototype.slice.call(document.querySelectorAll('[href="#' + anchor + '"]')).forEach(function(elt) {
-			elt.addEventListener('click', function() {
-				scrollToAnchor(anchor)
-			})
-		})
-	})
+  function onScroll () {
+    splashElt.clanim.height(window.innerHeight).start()
+    pageElt.clanim.top(window.innerHeight).start()
 
-	var wrapperY = 1200
-	var wrapperRatio = 1
+    if (window.scrollY < window.innerHeight) {
+      var wrapperRatio = 1
+      if (window.innerWidth < 340) {
+        wrapperRatio = 0.4
+      } else if (window.innerWidth < 460) {
+        wrapperRatio = 0.5
+      } else if (window.innerWidth < 560) {
+        wrapperRatio = 0.6
+      } else if (window.innerWidth < 660) {
+        wrapperRatio = 0.7
+      } else if (window.innerWidth < 760) {
+        wrapperRatio = 0.85
+      }
+      var height = window.innerHeight * 2 / 3 / wrapperRatio | 0
+      height = height > 700 ? 700 : height
+      scrollerElt.clanim.height(height).start()
+      backgroundElt.clanim.opacity((window.innerHeight - window.scrollY * 0.6) / window.innerHeight).start()
+      wrapperElt.clanim.bottom(-wrapperElt.offsetHeight + height).scale(wrapperRatio)
+      moveWrapperElt()
+    }
 
-	function onResize() {
-		splashElt.clanim.height(window.innerHeight).start()
-		pageElt.clanim.top(window.innerHeight).start()
-		if (window.innerWidth < 340) {
-			wrapperRatio = 0.4
-		} else if (window.innerWidth < 460) {
-			wrapperRatio = 0.5
-		} else if (window.innerWidth < 560) {
-			wrapperRatio = 0.6
-		} else if (window.innerWidth < 660) {
-			wrapperRatio = 0.7
-		} else if (window.innerWidth < 760) {
-			wrapperRatio = 0.85
-		}
-		var height = window.innerHeight * 3 / 4 / wrapperRatio | 0
-		height = height > 700 ? 700 : height
-		scrollerElt.clanim.height(height).start()
-		wrapperElt.clanim.bottom(-wrapperElt.offsetHeight + height).scale(wrapperRatio).translateY(wrapperY).start()
-	}
-	window.addEventListener('resize', onResize)
+    // var threshold = window.innerHeight - 160
+    // optionElts.forEach(function (elt) {
+    //   var coef = (threshold - elt.getBoundingClientRect().top) / 160
+    //   coef = coef > 1 ? 1 : coef < 0 ? 0 : coef
+    //   elt.clanim.opacity(coef).translateY((1 - coef) * 80).start(true)
+    // })
+  }
 
-	function onScroll() {
-		var scrollTop = document.body.scrollTop || htmlElt.scrollTop || 0
-		navbarElt.classList.toggle('md-whiteframe-z1', scrollTop > 10)
-		var threshold = window.innerHeight - 80
-		optionElts.forEach(function(elt) {
-			if (!elt.isShown && elt.getBoundingClientRect().top < threshold) {
-				elt.isShown = true
-				elt.clanim.opacity(1).translateY(0).duration(600).easing('materialOut').start(true)
-			}
-		})
-	}
-	window.addEventListener('scroll', onScroll)
+  function moveWrapperElt (ease) {
+    wrapperElt.clanim.translateY(wrapperY - window.scrollY / 2)
+    if (ease) {
+      wrapperElt.clanim.duration(800).easing('materialOut')
+    }
+    wrapperElt.clanim.start(true)
+  }
 
-	navbarElt.clanim.opacity(0).start().classList.remove('hidden')
-	optionElts.forEach(function(elt) {
-		elt.clanim.opacity(0).translateY(40).start().classList.remove('hidden')
-	})
-	socialBtns.forEach(function(elt) {
-		elt.clanim.duration(400).easing('materialOut').start(true)
-	})
-	if (navigator.appVersion.indexOf('Mac') !== -1) {
-		document.querySelector('.osx.option').classList.remove('no-display')
-	}
-	if (navigator.appVersion.indexOf('Win') !== -1) {
-		document.querySelector('.windows.option').classList.remove('no-display')
-	}
-	if (navigator.appVersion.indexOf('Linux') !== -1) {
-		document.querySelector('.linux.option').classList.remove('no-display')
-	}
-	if (window.chrome) {
-		document.querySelector('.chrome.option').classList.remove('no-display')
-	}
-	if (typeof InstallTrigger !== 'undefined') {
-		document.querySelector('.firefox.option').classList.remove('no-display')
-	}
-	onResize()
-	onScroll()
+  window.addEventListener('scroll', onScroll)
+  window.addEventListener('resize', onScroll)
 
-	setTimeout(function() {
-		navbarElt.clanim.opacity(1).duration(600).easing('materialOut').start(true)
-		setTimeout(function() {
-			wrapperY = 0
-			wrapperElt.clanim.scale(wrapperRatio).translateY(wrapperY).duration(500).easing('outBack').start(true).classList.remove('hidden')
-			setTimeout(function() {
-				editor.setSelection(editorContent.length, editorContent.length)
-			}, 500)
-		}, 500)
-	}, 500)
+  socialBtns.forEach(function (elt) {
+    elt.clanim.duration(400).easing('materialOut').start(true)
+  })
+  if (navigator.appVersion.indexOf('Mac') !== -1) {
+    document.querySelector('.osx.option').classList.remove('no-display')
+  }
+  if (navigator.appVersion.indexOf('Win') !== -1) {
+    document.querySelector('.windows.option').classList.remove('no-display')
+  }
+  if (navigator.appVersion.indexOf('Linux') !== -1) {
+    document.querySelector('.linux.option').classList.remove('no-display')
+  }
+  if (window.chrome) {
+    document.querySelector('.chrome.option').classList.remove('no-display')
+  }
+  if (typeof InstallTrigger !== 'undefined') {
+    document.querySelector('.firefox.option').classList.remove('no-display')
+  }
+
+  onScroll()
+
+  setTimeout(function () {
+    wrapperY = 0
+    moveWrapperElt(true)
+    setTimeout(function () {
+      editor.setSelection(editorContent.length, editorContent.length)
+      navbarElt.clanim.opacity(1).duration(800).easing('materialOut').start(true)
+    }, 1000)
+  }, 200)
 })()

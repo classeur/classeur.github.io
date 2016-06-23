@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/classeur/classeur.github.io#readme",
   "devDependencies": {
-    "eslint-config-classeur": "^1.0.1"
+    "clgulp": "~1.1.0"
   }
 }

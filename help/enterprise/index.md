@@ -1,6 +1,5 @@
 ---
 layout: help
-title: Enterprise
 
 ---
 
@@ -34,37 +33,50 @@ Port | Service | Description
 ## Get started
 
 1. SSH into your Linux server
-2. Run this install script:
+
+2. Make sure `curl` is installed:
+
+	```
+	$ sudo apt-get install -y curl
+	```
+
+3. Run this install script:
 
 	```
 	$ curl -sSL https://get.classeur.io | sudo sh
 	```
 
-3. Access your server via HTTPS on port 8800 & bypass the SSL security warning.
+	At the end of the installation, you should see the following message:
+
+	![enter image description here](https://i.imgur.com/OlRCH6d.png)
+
+	> Note that you will need the server to be accessed via a hostname rather than an IP address.
+
+4. Access your server via HTTPS on port 8800 and bypass the SSL security warning.
 
 	![enter image description here](https://i.imgur.com/XLvt2j4.png)
 
-4. Upload a custom TLS/SSL cert/key or proceed with the provided self-signed pair.
+5. Upload a custom TLS/SSL cert/key or proceed with the provided self-signed pair.
 
 	![enter image description here](https://i.imgur.com/QsjMomW.png)
 
-5. Upload the provided license file (.rli)
+6. Upload the provided license file (.rli)
 
 	![enter image description here](https://i.imgur.com/0QGLicj.png)
 
-6. Check your email for your license activation code.
+7. Check your email for your license activation code.
 
 	![enter image description here](https://i.imgur.com/FBgMckL.png)
 
-7. Secure your Classeur Management console with a password
+8. Secure your Classeur Management console with a password
 
 	![enter image description here](https://i.imgur.com/Ld90tiE.png)
 
-8. Configure your Classeur instance and click "Save"
+9. Configure your Classeur instance and click "Save"
 
 	![enter image description here](https://i.imgur.com/D7XetVw.png)
 
-9. Visit the following URL to manage users and roles (using the system key specified in the settings page)
+10. Visit the following URL to manage users and roles (using the system key specified in the settings page)
 
 	```
 	https://HOSTNAME/#!/users?syskey=SYSTEM_KEY

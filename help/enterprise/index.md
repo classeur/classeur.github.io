@@ -51,7 +51,7 @@ Port | Service | Description
 
 	![enter image description here](https://i.imgur.com/OlRCH6d.png)
 
-	> Note that you will need the server to be accessed via a hostname rather than an IP address.
+	> Note that you will need the server to be accessed via a host/domain name rather than an IP address.
 
 4. Access your server via HTTPS on port 8800 and bypass the SSL security warning.
 

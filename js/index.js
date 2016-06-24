@@ -51,16 +51,10 @@
       height = height > 700 ? 700 : height
       scrollerElt.clanim.height(height).start()
       backgroundElt.clanim.opacity((window.innerHeight - window.scrollY * 0.6) / window.innerHeight).start()
+      wrapperElt.classList.remove('hidden')
       wrapperElt.clanim.bottom(-wrapperElt.offsetHeight + height).scale(wrapperRatio)
       moveWrapperElt()
     }
-
-    // var threshold = window.innerHeight - 160
-    // optionElts.forEach(function (elt) {
-    //   var coef = (threshold - elt.getBoundingClientRect().top) / 160
-    //   coef = coef > 1 ? 1 : coef < 0 ? 0 : coef
-    //   elt.clanim.opacity(coef).translateY((1 - coef) * 80).start(true)
-    // })
   }
 
   function moveWrapperElt (ease) {

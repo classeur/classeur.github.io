@@ -66,6 +66,7 @@ br {
   .social {
     line-height: 1;
     margin: 12px 20px;
+    position: absolute;
     right: 0;
     top: 0;
 
@@ -363,6 +364,10 @@ $start-option-height-medium: 150px;
       font-weight: 300;
     }
   }
+}
+
+.plan-container {
+  margin: 0 20px;
 }
 
 .plan.item {

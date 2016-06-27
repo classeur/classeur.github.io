@@ -59,13 +59,13 @@ br {
     background-size: 154px 44px;
     display: inline-block;
     height: 44px;
-    margin: 0 30px;
+    margin: 0 20px;
     width: 150px;
   }
 
   .social {
     line-height: 1;
-    margin: 12px 30px;
+    margin: 12px 20px;
     right: 0;
     top: 0;
 
@@ -370,6 +370,7 @@ $start-option-height-medium: 150px;
   border-radius: 3px;
   height: 510px;
   margin: 0 -8px 60px;
+  max-width: 310px;
   position: relative;
   text-align: center;
   width: 90%;

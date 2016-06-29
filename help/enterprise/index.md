@@ -9,7 +9,7 @@ title: 'On-prem installation'
 
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
 
-	> For Amazon EC2, we recommend using the [Ubuntu Server 14.04 LTS AMI](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
+	> We recommend using Ubuntu Server 14.04 LTS.
 	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
 

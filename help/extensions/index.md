@@ -1,6 +1,6 @@
 ---
 layout: help
-title: How to use extensions
+title: Extensions
 
 ---
 

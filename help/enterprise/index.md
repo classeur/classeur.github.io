@@ -7,9 +7,9 @@ title: 'On-prem installation'
 # Prerequisites
 
 
-- A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
+- A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora) with at least 20GB disk space.
 
-	> We recommend using Ubuntu Server 14.04 LTS.
+	> We recommend using Ubuntu Server 14.04 LTS
 	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
 

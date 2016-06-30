@@ -78,7 +78,7 @@ Port | Service | Description
 
 	![enter image description here](https://i.imgur.com/D7XetVw.png)
 
-10. Visit the following URL to manage users and roles (using the system key specified in the settings page)
+10. Visit the following URL to manage users and roles using the system key specified in the settings page
 
 	```
 	https://HOSTNAME/#!/users?syskey=SYSTEM_KEY

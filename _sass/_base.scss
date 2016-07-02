@@ -153,7 +153,7 @@ dt {
   }
 
   .btn {
-    color: rgba(85, 85, 85, 0.4);
+    color: rgba(85, 85, 85, 0.5);
     display: block;
     padding: 8px;
 
@@ -168,14 +168,14 @@ dt {
   }
 
   .header {
-    color: rgba(85, 85, 85, 0.4);
+    color: rgba(85, 85, 85, 0.5);
     display: block;
     padding: 6px;
     padding-left: 16px;
     text-decoration: none;
 
     &:hover {
-      color: rgba(85, 85, 85, 0.6);
+      color: rgba(85, 85, 85, 0.75);
     }
 
     &.small {

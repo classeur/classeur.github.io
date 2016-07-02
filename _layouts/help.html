@@ -14,10 +14,8 @@
             </div>
             {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %}
             {% if pageUrl == '/help/' %}
-            <a class="btn active">Help</a> {% else %}
-            <a class="btn" href="/help/">Help</a> {% endif %} {% for path in paths %} {% capture url %}/help/{{ path | replace: ' ', '-' }}/{% endcapture %} {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %} {% if pageUrl == url %}
-            <a class="btn active">{{ path }}</a> {% else %}
-            <a class="btn" href="/help/{{ path | replace: ' ', '-' }}/">{{ path }}</a> {% endif %} {% endfor %}
+            <a class="btn active">Help</a> {% endif %} {% for path in paths %} {% capture url %}/help/{{ path | replace: ' ', '-' }}/{% endcapture %} {% capture pageUrl %}{{ page.url | replace: 'index.html', '' }}{% endcapture %} {% if pageUrl == url %}
+            <a class="btn active">{{ path }}</a> {% endif %} {% endfor %}
         </div>
         <div class="right-column">
             <div class="title">{{ page.title }}</div>

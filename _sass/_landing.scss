@@ -56,9 +56,9 @@ br {
 
   .logo {
     background: url('../img/logo-white.png');
-    background-size: 154px 44px;
+    background-size: 150px 40px;
     display: inline-block;
-    height: 44px;
+    height: 40px;
     margin: 0 20px;
     width: 150px;
   }
@@ -80,10 +80,9 @@ br {
     bottom: 0;
     color: #fff;
     font-size: 1.5em;
-    font-weight: 400;
     left: 50%;
     letter-spacing: 0.02em;
-    padding: 12px 24px;
+    padding: 12px 20px;
     position: absolute;
     transform: translateX(-50%);
 
@@ -442,6 +441,10 @@ $start-option-height-medium: 150px;
     line-height: 1.3;
     list-style-type: none;
     padding: 8px 12px;
+
+    small {
+      color: #aaa;
+    }
   }
 
   .btn {
@@ -453,27 +456,25 @@ $start-option-height-medium: 150px;
 }
 
 .warning {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.67);
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 30px;
 
   .btn {
-    color: #999;
+    color: rgba(0, 0, 0, 0.35);
     display: block;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.8;
 
     .icon {
-      font-size: 50px;
+      font-size: 1.8em;
       line-height: 1;
     }
   }
 }
 
 .discount {
+  max-width: 400px;
   text-align: center;
-  width: 400px;
 }
 
 .testimonial {
@@ -492,11 +493,11 @@ $start-option-height-medium: 150px;
 
     &::before,
     &::after {
-      color: #ccc;
+      color: #ddd;
       content: '\e793';
       display: inline-block;
       font-family: 'icomoon';
-      font-size: 1.5em;
+      font-size: 1.3em;
       line-height: 0;
     }
 

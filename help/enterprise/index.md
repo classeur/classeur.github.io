@@ -7,9 +7,10 @@ title: 'On-prem installation'
 # Prerequisites
 
 
-- A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora)
+- A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora) with at least 20GB disk space.
 
-	> For Amazon EC2, we recommend using the [Ubuntu Server 14.04 LTS AMI](https://aws.amazon.com/marketplace/pp/B00JV9JBDS).
+	> We recommend using Ubuntu Server 14.04 LTS.
+	> If using internal database, disk space usage will grow as number of users, files...
 	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
 
@@ -77,7 +78,7 @@ Port | Service | Description
 
 	![enter image description here](https://i.imgur.com/D7XetVw.png)
 
-10. Visit the following URL to manage users and roles (using the system key specified in the settings page)
+10. Visit the following URL to manage users and roles using the system key specified in the settings page
 
 	```
 	https://HOSTNAME/#!/users?syskey=SYSTEM_KEY

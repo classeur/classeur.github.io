@@ -36,7 +36,7 @@ Port | Service | Description
 
 1. SSH into your Linux server
 
-2. Make sure `curl` is installed:
+2. Make sure `curl` is installed. On Ubuntu, type:
 
 	```
 	$ sudo apt-get install -y curl

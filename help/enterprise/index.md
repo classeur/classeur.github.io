@@ -1,6 +1,6 @@
 ---
 layout: help
-title: 'On-prem installation'
+title: Installation
 
 ---
 

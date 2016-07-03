@@ -50,5 +50,5 @@ Any questions about this document should be addressed to the support:
 
 <support@classeur.io>
 
-This document was last updated on November 16, 2015.
+[See the history of this document](https://github.com/classeur/classeur.github.io/blob/master/terms/index.md)
 

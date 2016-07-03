@@ -89,7 +89,7 @@ If there are any questions regarding this privacy policy you may contact us usin
 
 Dock5 Software Ltd.
 Email: <contact@classeur.io>
-Address: 11 Cairnbrook View, Carrickmines, Dublin 18, Ireland
+Address: The Black Church, Saint Mary's Place North, Dublin 7, Ireland
 
 This document was last updated on November 16, 2015.
 

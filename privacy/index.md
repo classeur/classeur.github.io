@@ -91,5 +91,5 @@ Dock5 Software Ltd.
 Email: <contact@classeur.io>  
 Address: The Black Church, Saint Mary's Place North, Dublin 7, Ireland
 
-This document was last updated on November 16, 2015.
+[See the history of this document](https://github.com/classeur/classeur.github.io/blob/master/privacy/index.md)
 

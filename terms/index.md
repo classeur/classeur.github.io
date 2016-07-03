@@ -8,9 +8,9 @@ By using the Classeur (classeur.io) web site ("Service"), you are agreeing to be
 
 Classeur (classeur.io) is owned by Dock5 Software Ltd.
 
-Dock5 Software Ltd.
-Email: <contact@classeur.io>
-Address: 11 Cairnbrook View, Carrickmines, Dublin 18, Ireland
+Dock5 Software Ltd.  
+Email: <contact@classeur.io>  
+Address: The Black Church, Saint Mary's Place North, Dublin 7
 
 Dock5 Software reserves the right to update and change the Terms of Service from time to time without notice. Any new features that augment or enhance the current Service, including the release of new tools and resources, shall be subject to the Terms of Service. Continued use of the Service after any such changes shall constitute your consent to such changes. You can review the most current version of the Terms of Service at any time at: http://classeur.io/terms
 

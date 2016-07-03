@@ -9,7 +9,7 @@ title: Installation
 
 - A Linux server (modern versions of Ubuntu, Debian, Centos, Red Hat & Fedora) with at least 20GB disk space.
 
-	> We recommend using Ubuntu Server 14.04 LTS.
+	> We recommend using Ubuntu Server 16.04 LTS.
 	> If using internal database, disk space usage will grow as number of users, files...
 	
 - A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)

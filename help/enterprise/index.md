@@ -12,7 +12,9 @@ title: Installation
 	> We recommend using Ubuntu Server 16.04 LTS.
 	> If using internal database, disk space usage will grow as number of users, files...
 	
-- A Classeur Enterprise license file (email <contact@classeur.io> for a free trial)
+- A Classeur Enterprise license file.
+
+	> You can checkout a license at https://enterprise.classeur.io or email <contact@classeur.io> for a free trial.
 
 
 

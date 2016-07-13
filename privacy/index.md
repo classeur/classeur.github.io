@@ -87,9 +87,9 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 If there are any questions regarding this privacy policy you may contact us using the information below.
 
-Dock5 Software Ltd.
-Email: <contact@classeur.io>
-Address: 11 Cairnbrook View, Carrickmines, Dublin 18, Ireland
+Dock5 Software Ltd.  
+Email: <contact@classeur.io>  
+Address: The Black Church, Saint Mary's Place North, Dublin 7, Ireland
 
-This document was last updated on November 16, 2015.
+[See the history of this document](https://github.com/classeur/classeur.github.io/blob/master/privacy/index.md)
 

@@ -26,7 +26,21 @@ ext:markdown:sub
 ext:markdown:sup
 ext:markdown:table
 ext:markdown:typographer
-ext:markdown:toc
+```
+
+For example, to enable strict CommonMark compliance:
+
+```
+ext:markdown:abbr			false
+ext:markdown:breaks			false
+ext:markdown:deflist		false
+ext:markdown:del			false
+ext:markdown:footnote		false
+ext:markdown:linkify		false
+ext:markdown:sub			false
+ext:markdown:sup			false
+ext:markdown:table			false
+ext:markdown:typographer	false
 ```
 
 
@@ -90,13 +104,6 @@ To disable tables, set the property `ext:markdown:table` to `false`.
 The typographer extension enables some language-neutral replacement and quotes beautification.
 
 To disable typographer, set the property `ext:markdown:typographer` to `false`.
-
-## Table Of Contents
-
-A description of Markdown table of contents can be found [here](https://pythonhosted.org/Markdown/extensions/toc.html).
-
-To specify the depth of the table of contents, set a number value in the property `ext:markdown:tocdepth` (default is 6).
-To disable table of contents, set the property `ext:markdown:toc` to `false`.
 
 
 # MathJax

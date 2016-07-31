@@ -31,16 +31,16 @@ ext:markdown:typographer
 For example, to enable strict CommonMark compliance:
 
 ```
-ext:markdown:abbr			false
-ext:markdown:breaks			false
-ext:markdown:deflist		false
-ext:markdown:del			false
-ext:markdown:footnote		false
-ext:markdown:linkify		false
-ext:markdown:sub			false
-ext:markdown:sup			false
-ext:markdown:table			false
-ext:markdown:typographer	false
+ext:markdown:abbr           false
+ext:markdown:breaks         false
+ext:markdown:deflist        false
+ext:markdown:del            false
+ext:markdown:footnote       false
+ext:markdown:linkify        false
+ext:markdown:sub            false
+ext:markdown:sup            false
+ext:markdown:table          false
+ext:markdown:typographer    false
 ```
 
 

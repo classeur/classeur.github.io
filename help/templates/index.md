@@ -29,7 +29,7 @@ When processing a file, Handlebars receives the following context along with the
 
 So, for example, the following template:
 
-```
+```html
 <html>
 <head>
 <title>{{file.name}}</title>
@@ -39,7 +39,7 @@ So, for example, the following template:
 
 will be transformed by the template engine into:
 
-```
+```html
 <html>
 <head>
 <title>The filename</title>

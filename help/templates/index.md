@@ -29,7 +29,6 @@ When processing a file, Handlebars receives the following context along with the
 
 So, for example, the following template:
 
-{% raw %}
 ```
 <html>
 <head>
@@ -37,7 +36,6 @@ So, for example, the following template:
 <body>{{{file.content.html}}}</body>
 </html>
 ```
-{% endraw %}
 
 will be transformed by the template engine into:
 
@@ -58,13 +56,11 @@ In addition to the default Handlebars helpers, Classeur adds its own ones.
 
 The `toYaml` helper allows you to convert an object into YAML. Typically, to generate a YAML front matter from your file properties, you can prefix your template with:
 
-{%raw%}
 ```
 ---
 {{#toYaml file.content.properties}}{{/toYaml}}
 ---
 ```
-{%endraw%}
 
 
 ## Custom helpers
